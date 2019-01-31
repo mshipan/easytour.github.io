@@ -3,7 +3,6 @@
 include('views/master/header.php');
 ?>
 
-<h1>nur alam</h1>
 	<div class="site wrapper-content">
 		<div class="home-content" role="main">
 			<div class="section-background" style="background-image:url('images/home/banner-home3.jpg'); min-height: 100vh;position: relative;">
