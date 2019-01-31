@@ -3,7 +3,7 @@
 include('views/master/header.php');
 ?>
 
-	<div class="nooooone site wrapper-content">
+	<div class="nooooone balamar site wrapper-content">
 		<div class="home-content" role="main">
 			<div class="section-background" style="background-image:url('images/home/banner-home3.jpg'); min-height: 100vh;position: relative;">
 				<div class="text-banner-home4">
