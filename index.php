@@ -1,6 +1,6 @@
 <?php
 
-include('master/header.php');
+include('views/master/header.php');
 ?>
 
 <h1>nur alam</h1>
@@ -433,6 +433,6 @@ include('master/header.php');
 
 <?php
 
-include('master/footer.php');
+include('views/master/footer.php');
 
 ?>
