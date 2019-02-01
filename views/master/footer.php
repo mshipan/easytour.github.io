@@ -90,5 +90,4 @@
 </script>
 <?php require 'views/master/scriptLinks.php' ?>
 </body>
-
 </html>
