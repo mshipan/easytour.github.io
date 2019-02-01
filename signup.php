@@ -107,7 +107,7 @@ if (isset($_POST['registration'])) {
                                                         </div>
                                                     </div>
                                                     <div class="form-group row">
-                                                        <label for="permanent_address" class="col-md-2 col-form-label text-md-right">Profile Image <small style="color: red;">300*200 | under 1MB</small></label>
+                                                        <label for="permanent_address" class="col-md-2 col-form-label text-md-right">Profile Image <small style="color: red;">300*200 | Max 1MB</small></label>
                                                         <div class="col-md-8">
                                                             <input type="file" name="image" id="permanent_address" class="form-control" >
                                                         </div>

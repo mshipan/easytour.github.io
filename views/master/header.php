@@ -6,18 +6,12 @@
 	<meta name="viewport" content="width=device-width, initial-scale=1">
 	<link rel="profile" href="http://gmpg.org/xfn/11">
 	<link rel="pingback" href="xmlrpc.html">
-	<title>Travel Home Page 4</title>
-	<!-- <link rel="stylesheet" href="http://fonts.googleapis.com/css?family=Roboto:300,400,500,700"> -->
+	<title>Easy Travel Home</title>
 	<link rel="stylesheet" href="assets/css/bootstrap.min.css" type="text/css" media="all">
 	<link rel="stylesheet" href="assets/css/font-awesome.min.css" type="text/css" media="all">
-	<link rel="stylesheet" href="assets/css/flaticon.css" type="text/css" media="all">
-	<link rel="stylesheet" href="assets/css/font-linearicons.css" type="text/css" media="all">
-	<link rel="stylesheet" href="assets/css/booking.css" type="text/css" media="all">
-	<link rel="stylesheet" href="assets/css/swipebox.min.css" type="text/css" media="all">
-	<link rel="stylesheet" href="style.css" type="text/css" media="all">
 	<link rel="stylesheet" href="style_comment.css" type="text/css" media="all">
-	<link rel="stylesheet" href="assets/css/travel-setting-home-4.css" type="text/css" media="all">
 	<link rel="shortcut icon" href="images/favicon.png" type="image/x-icon">
+	<?php require 'views/master/headerLinks.php';?>
 </head>
 <body>
 <div class="wrapper-container">
@@ -31,7 +25,7 @@
 					<span class="icon-bar"></span>
 				</div>
 				<div class="width-logo sm-logo">
-					<a href="#" title="Travel" rel="home">
+					<a href="index.php" title="Travel" rel="home">
 						<img src="images/logo.png" alt="Logo" width="474" height="130" class="logo_transparent_static">
 						<img src="images/logo_sticky.png" alt="Sticky logo" width="474" height="130" class="logo_sticky">
 					</a>
@@ -39,19 +33,17 @@
 				<nav class="width-navigation">
 					<ul class="nav navbar-nav menu-main-menu side-nav" id="mobile-demo">
 						<li class="">
-							<a href="index-2.html">Home</a>
+							<a href="index.php">Home</a>
 						</li>
 						<li class="">
-							<a href="tours.html">Tours</a>
+							<a href="#">Tours</a>
 						</li>
 
-						<li><a href="destinations.html">Destinations</a></li>
-						<li><a href="blog.html">Blog</a></li>
-
-						<li class="">
-							<a href="#">Pages</a>
-						</li>
-						<li><a href="contact.html">Contact</a></li>
+						<li><a href="#">Hotels</a></li>
+						<li><a href="blog.php">Blog</a></li>
+						<li><a href="#">Contact</a></li>
+						<li><a href="login.php">Login</a></li>
+						<li><a href="signup.php">Sign Up</a></li>
 						<li class="menu-right">
 							<ul>
 								<li id="travel_social_widget-2" class="widget travel_search">

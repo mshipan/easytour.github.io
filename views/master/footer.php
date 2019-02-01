@@ -58,7 +58,7 @@
 	<div class="container wrapper-copyright">
 		<div class="row">
 			<div class="col-sm-6">
-				<div><p>Copyright © 2017 Travel. All Rights Reserved.</p></div>
+				<div><p>Copyright © 2019 Easy Travel. All Rights Reserved.</p></div>
 			</div>
 			<div class="col-sm-6">
 				<aside id="text-5" class="widget_text">
@@ -82,20 +82,12 @@
 </div>
 <script type='text/javascript' src='assets/js/jquery.min.js'></script>
 <script type='text/javascript' src='assets/js/bootstrap.min.js'></script>
-<script type='text/javascript' src='assets/js/vendors.js'></script>
-<script type='text/javascript' src='assets/js/owl.carousel.min.js'></script>
-<script type="text/javascript" src="assets/js/jquery.mb-comingsoon.min.js"></script>
-<script type="text/javascript" src="assets/js/waypoints.min.js"></script>
-<script type="text/javascript" src="assets/js/jquery.counterup.min.js"></script>
-<script type="text/javascript" src="assets/js/typed.min.js"></script>
-<script type='text/javascript' src='assets/js/theme.js'></script>
-<script type='text/javascript' src='https://maps.googleapis.com/maps/api/js?key=AIzaSyCaQjbVDR1vRh2iS_V3jLBXRrkQxmoxycQ'></script>
-<script type='text/javascript' src='assets/js/jquery.swipebox.min.js'></script>
 <script type="text/javascript">
 	$(document).ready(function(){
 
-$("[data-toggle=tooltip]").tooltip();
-});
+	$("[data-toggle=tooltip]").tooltip();
+	});
 </script>
+<?php require 'views/master/scriptLinks.php' ?>
 </body>
 </html>
