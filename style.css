@@ -1,35 +1,4 @@
-/*------------------------------------------------------------------
-[Master Stylesheet]
 
-Project:	Travel tour html
-Version:	1.0
-Last change:
-Assigned to: Physcode
-Primary use:	Travel, travel booking
--------------------------------------------------------------------*/
-
-/*--------------------------------------------------------------
->>> TABLE OF CONTENTS:
-----------------------------------------------------------------
-# Normalize
-# Typography
-# Elements
-# Forms
-# Navigation
-	## Links
-	## Menus
-# Accessibility
-# Alignments
-# Clearings
-# Content
-	## Posts and pages
-	## Asides
-	## Comments
-# Infinite scroll
-# Media
-	## Captions
-	## Galleries
---------------------------------------------------------------*/
 
 * {
 	margin:  0;
@@ -49,6 +18,13 @@ body {
 article, aside, details, figcaption, figure, footer, header, main, menu, nav, section, summary {
 	display: block;
 }
+
+
+/*coustom style*/
+
+
+
+/*end coustom style*/
 
 audio, canvas, progress, video {
 	display:        inline-block;
