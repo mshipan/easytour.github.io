@@ -11,7 +11,7 @@
 	<link rel="stylesheet" href="assets/css/font-awesome.min.css" type="text/css" media="all">
 	<link rel="stylesheet" href="style_comment.css" type="text/css" media="all">
 	<link rel="shortcut icon" href="images/favicon.png" type="image/x-icon">
-	<?php require 'views/master/headerLinks.php';?>
+	<?php require 'headerLinks.php';?>
 </head>
 <body>
 <div class="wrapper-container">
@@ -36,10 +36,10 @@
 							<a href="index.php">Home</a>
 						</li>
 						<li class="">
-							<a href="#">Tours</a>
+							<a href="tours.php">Tours</a>
 						</li>
 
-						<li><a href="#">Hotels</a></li>
+						<li><a href="hotels.php">Hotels</a></li>
 						<li><a href="blog.php">Blog</a></li>
 						<li><a href="#">Contact</a></li>
 						<li><a href="login.php">Login</a></li>

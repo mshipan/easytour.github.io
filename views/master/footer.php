@@ -88,6 +88,6 @@
 	$("[data-toggle=tooltip]").tooltip();
 	});
 </script>
-<?php require 'views/master/scriptLinks.php' ?>
+<?php require 'scriptLinks.php' ?>
 </body>
 </html>

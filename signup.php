@@ -54,56 +54,56 @@ if (isset($_POST['registration'])) {
                                                     <div class="form-group row">
                                                         <label for="full_name" class="col-md-2 col-form-label text-md-right">Full Name </label>
                                                         <div class="col-md-8">
-                                                            <input type="text" id="full_name" class="form-control" name="name">
+                                                            <input type="text" id="full_name" class="form-control" name="name" required>
                                                         </div>
                                                     </div>
                                                     <div class="form-group row">
                                                         <label for="email_address" class="col-md-2 col-form-label text-md-right">E-Mail Address</label>
                                                         <div class="col-md-8">
-                                                            <input type="email" id="email_address" class="form-control" name="email">
+                                                            <input type="email" id="email_address" class="form-control" name="email" required>
                                                         </div>
                                                     </div>
                                                     <div class="form-group row">
                                                         <label for="phone_number" class="col-md-2 col-form-label text-md-right">Phone Number</label>
                                                         <div class="col-md-8">
-                                                            <input type="text" name="phone" id="phone_number" class="form-control">
+                                                            <input type="text" name="phone" id="phone_number" class="form-control" required>
                                                         </div>
                                                     </div>
                                                     <div class="form-group row">
                                                         <label for="user_name" class="col-md-2 col-form-label text-md-right">Password</label>
                                                         <div class="col-md-3">
-                                                            <input type="password" id="user_name" class="form-control" name="password">
+                                                            <input type="password" id="user_name" class="form-control" name="password" required>
                                                         </div>
                                                         <label style="text-align: right;" for="user_name" class="col-md-2 col-form-label text-md-right">Confirm Password</label>
                                                         <div class="col-md-3">
-                                                            <input type="password" id="user_name" class="form-control" name="password">
+                                                            <input type="password" id="user_name" class="form-control" name="password" required>
                                                         </div>
                                                     </div>
                                                     
                                                     <div class="form-group row">
                                                         <label for="present_address" class="col-md-2 col-form-label text-md-right">Village</label>
                                                         <div class="col-md-3">
-                                                            <input type="text" name="village" id="present_address" class="form-control">
+                                                            <input type="text" name="village" id="present_address" class="form-control" required>
                                                         </div>
                                                         <label style="text-align: right;" for="permanent_address" class="col-md-2 col-form-label text-md-right">Upozila</label>
                                                         <div class="col-md-3">
-                                                            <input type="text" name="upozila" id="permanent_address" class="form-control" name="permanent-address">
+                                                            <input type="text" name="upozila" id="permanent_address" class="form-control" name="permanent-address" required>
                                                         </div>
                                                     </div>
                                                     <div class="form-group row">
                                                         <label for="permanent_address" class="col-md-2 col-form-label text-md-right">District</label>
                                                         <div class="col-md-3">
-                                                            <input type="text" name="district" id="permanent_address" class="form-control" name="permanent-address">
+                                                            <input type="text" name="district" id="permanent_address" class="form-control" name="permanent-address" required>
                                                         </div>
                                                         <label style="text-align: right;" for="permanent_address" class="col-md-2 col-form-label text-md-right">Country</label>
                                                         <div class="col-md-3">
-                                                            <input type="text" name="country" id="permanent_address" class="form-control" name="permanent-address">
+                                                            <input type="text" name="country" id="permanent_address" class="form-control" name="permanent-address" required>
                                                         </div>
                                                     </div>
                                                     <div class="form-group row">
                                                         <label for="permanent_address" class="col-md-2 col-form-label text-md-right">Zip Code</label>
                                                         <div class="col-md-8">
-                                                            <input type="text" name="zip" id="permanent_address" class="form-control" >
+                                                            <input type="text" name="zip" id="permanent_address" class="form-control" required>
                                                         </div>
                                                     </div>
                                                     <div class="form-group row">

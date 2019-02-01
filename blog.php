@@ -5,10 +5,10 @@
 		<section class="content-area">
 			<div class="container">
 				<div class="row">
-					<div class="site-main col-sm-9 align-left">
+					<div class="site-main col-sm-12 align-left">
 						<div class="wrapper-blog-content">
 							<article class="type-post">
-								<div class="img_post"><a href="single.html">
+								<div class="img_post"><a href="blog_details.php">
 									<img width="370" height="260" src="images/blog/86H.jpg" class="wp-post-image" alt=""></a>
 								</div>
 								<div class="entry-content content-thumbnail">
@@ -17,7 +17,7 @@
 											<a href="single.html" rel="bookmark">World’s hottest destinations for vegans</a>
 										</h2>
 										<div class="entry-meta">
-											<span class="posted-on">Posted on <a href="single.html" rel="bookmark">
+											<span class="posted-on">Posted on <a href="blog_details.php" rel="bookmark">
 												<time class="entry-date published" datetime="2016-09-06T04:52:25+00:00">September 6, 2016</time>
 											</a></span>
 										</div>
@@ -28,7 +28,7 @@
 								</div>
 							</article>
 							<article class="type-post">
-								<div class="img_post"><a href="single.html">
+								<div class="img_post"><a href="blog_details.php">
 									<img width="370" height="260" src="images/blog/86H.jpg" class="wp-post-image" alt=""></a>
 								</div>
 								<div class="entry-content content-thumbnail">
@@ -37,7 +37,7 @@
 											<a href="single.html" rel="bookmark">World’s hottest destinations for vegans</a>
 										</h2>
 										<div class="entry-meta">
-											<span class="posted-on">Posted on <a href="single.html" rel="bookmark">
+											<span class="posted-on">Posted on <a href="blog_details.php" rel="bookmark">
 												<time class="entry-date published" datetime="2016-09-06T04:52:25+00:00">September 6, 2016</time>
 											</a></span>
 										</div>
@@ -48,7 +48,7 @@
 								</div>
 							</article>
 							<article class="type-post">
-								<div class="img_post"><a href="single.html">
+								<div class="img_post"><a href="blog_details.php">
 									<img width="370" height="260" src="images/blog/86H.jpg" class="wp-post-image" alt=""></a>
 								</div>
 								<div class="entry-content content-thumbnail">
@@ -67,27 +67,7 @@
 									</div>
 								</div>
 							</article>
-							
 						</div>
-						<div class="navigation paging-navigation" role="navigation">
-							<ul class="page-numbers">
-								<li><span class="page-numbers current">1</span></li>
-								<li><a class="page-numbers" href="#">2</a></li>
-								<li><a class="next page-numbers" href="#"><i class="fa fa-long-arrow-right"></i></a>
-								</li>
-							</ul>
-						</div>
-					</div>
-					<div class="widget-area col-sm-3 alignright">
-						<aside class="widget widget_text">
-							<img src="images/images-sidebar/sidebanner-ticketing.jpg" alt="">
-						</aside>
-						<aside class="widget widget_text">
-							<img src="images/images-sidebar/sidebanner-tour.png" alt="">
-						</aside>
-						<aside class="widget widget_text">
-							<img src="images/images-sidebar/hertz-sidebanner.jpg" alt="">
-						</aside>
 					</div>
 				</div>
 			</div>
