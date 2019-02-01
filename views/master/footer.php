@@ -89,6 +89,8 @@
 <script type="text/javascript" src="assets/js/jquery.counterup.min.js"></script>
 <script type="text/javascript" src="assets/js/typed.min.js"></script>
 <script type='text/javascript' src='assets/js/theme.js'></script>
+<script type='text/javascript' src='https://maps.googleapis.com/maps/api/js?key=AIzaSyCaQjbVDR1vRh2iS_V3jLBXRrkQxmoxycQ'></script>
+<script type='text/javascript' src='assets/js/jquery.swipebox.min.js'></script>
 </body>
 
 <!-- Mirrored from html.physcode.com/travel/home-4.html by HTTrack Website Copier/3.x [XR&CO'2014], Sat, 26 Jan 2019 17:15:05 GMT -->

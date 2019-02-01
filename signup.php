@@ -31,7 +31,6 @@ if (isset($_POST['registration'])) {
 
  ?>
 <?php include('views/master/header.php'); ?>
-
 <!-- always need start -->
 <div class="site wrapper-content">
     <br>
@@ -41,10 +40,7 @@ if (isset($_POST['registration'])) {
                 <div class="site-main col-sm-12">
                     <div class="entry-content">
                         <div class="travel_tour">
-
-<!-- always need end -->
-
-
+                            <!-- always need end -->
                             <div class="travel_tour-info-login-form">
                                 <h2 style="text-align: center;">Register as a new user...</h2><br>
                                 <div class="row justify-content-center">
@@ -129,21 +125,15 @@ if (isset($_POST['registration'])) {
                                     <div class="col-md-1"></div>
                                 </div>
                             </div>
-
-
-
-
 <!-- allways need start -->
+
                     </div>
                 </div>
             </div>
         </div>
     </div>
 </section>
-
 <!-- always need stop -->
-
-
 <?php
 include('views/master/footer.php');
 ?>
