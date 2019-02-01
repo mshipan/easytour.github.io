@@ -1,5 +1,4 @@
 <?php include('views/master/header.php'); ?>
-
 <!-- always need start -->
 <div class="site wrapper-content">
     <br><br><br>
@@ -9,10 +8,7 @@
                 <div class="site-main col-sm-12">
                     <div class="entry-content">
                         <div class="travel_tour">
-
-<!-- always need end -->
-
-
+                            <!-- always need end -->
                             <div class="travel_tour-info-login-form">
                                 <h2 style="text-align: center;">Register as a new user..</h2><br>
                                 <div class="row justify-content-center">
@@ -68,8 +64,8 @@
                                                         <label for="nid_number" class="col-md-4 col-form-label text-md-right"></label>
                                                         <div class="col-md-6">
                                                             <button type="submit" class="btn btn-primary">
-                                                        Register
-                                                        </button>
+                                                            Register
+                                                            </button>
                                                         </div>
                                                     </div>
                                                 </div>
@@ -80,21 +76,14 @@
                                 </div>
                             </div>
                         </div>
-
-
-
-
-<!-- allways need start -->
+                        <!-- allways need start -->
                     </div>
                 </div>
             </div>
         </div>
     </div>
 </section>
-
 <!-- always need stop -->
-
-
 <?php
 include('views/master/footer.php');
 ?>
