@@ -1,0 +1,9 @@
+<script type='text/javascript' src='assets/js/vendors.js'></script>
+<script type='text/javascript' src='assets/js/owl.carousel.min.js'></script>
+<script type="text/javascript" src="assets/js/jquery.mb-comingsoon.min.js"></script>
+<script type="text/javascript" src="assets/js/waypoints.min.js"></script>
+<script type="text/javascript" src="assets/js/jquery.counterup.min.js"></script>
+<script type="text/javascript" src="assets/js/typed.min.js"></script>
+<script type='text/javascript' src='assets/js/theme.js'></script>
+<script type='text/javascript' src='https://maps.googleapis.com/maps/api/js?key=AIzaSyCaQjbVDR1vRh2iS_V3jLBXRrkQxmoxycQ'></script>
+<script type='text/javascript' src='assets/js/jquery.swipebox.min.js'></script>
