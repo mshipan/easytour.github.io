@@ -98,5 +98,4 @@ $("[data-toggle=tooltip]").tooltip();
 });
 </script>
 </body>
-<!-- Mirrored from html.physcode.com/travel/home-4.html by HTTrack Website Copier/3.x [XR&CO'2014], Sat, 26 Jan 2019 17:15:05 GMT -->
 </html>

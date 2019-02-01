@@ -6,7 +6,7 @@
 if (isset($_POST['registration'])) {
     if ($_SERVER["REQUEST_METHOD"]=="POST") {
     $name=validator($_POST['name']);
-    $email=validator($_POST['email']);
+    $email=validatorPass($_POST['email']);
     $phone=validatorPass($_POST['phone']);
     $village=validator($_POST['village']);
     $upozila=validator($_POST['upozila']);
