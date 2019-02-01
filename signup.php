@@ -26,6 +26,8 @@ if (isset($_POST['registration'])) {
         'zip_code' => $zip,
         'password' => $password,
     ]);
+    $msg="Registration succesfull please login now!";
+    header('location:login.php?msg='.$msg);
     }
 }
 
@@ -116,6 +118,12 @@ if (isset($_POST['registration'])) {
                                                             <button name="registration" type="submit" class="btn btn-primary">
                                                         Register
                                                         </button>
+                                                        </div>
+                                                    </div>
+                                                    <div class="form-group row">
+                                                        <label for="nid_number" class="col-md-2 col-form-label text-md-right"></label>
+                                                        <div class="col-md-8">
+                                                            Already a member? please <a href="login.php"><u>Sign In </u></a> 
                                                         </div>
                                                     </div>
                                                 </form>
