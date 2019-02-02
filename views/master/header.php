@@ -41,7 +41,7 @@
 
 						<li><a href="hotels.php">Hotels</a></li>
 						<li><a href="blog.php">Blog</a></li>
-						<li><a href="#">Contact</a></li>
+						<li><a href="contact.php">Contact</a></li>
 						<li><a href="login.php">Login</a></li>
 						<li><a href="signup.php">Sign Up</a></li>
 						<li class="menu-right">
