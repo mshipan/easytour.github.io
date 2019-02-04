@@ -30,3 +30,5 @@ Manager::schema()->create('roles', function ($table) {
     $table->timestamps();
 });
 
+
+
