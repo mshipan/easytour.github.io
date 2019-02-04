@@ -257,8 +257,15 @@
                         <li> <a class="has-arrow  " href="#" aria-expanded="false"><i class="fa fa-envelope"></i><span class="hide-menu">User's</span></a>
                             <ul aria-expanded="false" class="collapse">
                                 <li><a href="registeredUser.php">Registered User</a></li>
-                                <li><a href="">Read</a></li>
                                 <li><a href="">Inbox</a></li>
+                            </ul>
+                        </li>
+                        <li> <a class="has-arrow  " href="#" aria-expanded="false"><i class="fa fa-tachometer"></i><span class="hide-menu">Package </span></a>
+                            <ul aria-expanded="false" class="collapse">
+                                <li><a href="hotelPackage.php">Add Hotel Package</a></li>
+                                <li><a href="allHotelPackage.php">All Hotel Package</a></li>
+                                <li><a href="tourPackage.php">Add Tour Package</a></li>
+                                <li><a href="allTourPackage.php">All Tour Package</a></li>
                             </ul>
                         </li>
                     </ul>
