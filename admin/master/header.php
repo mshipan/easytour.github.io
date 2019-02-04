@@ -256,7 +256,7 @@
                         </li>
                         <li> <a class="has-arrow  " href="#" aria-expanded="false"><i class="fa fa-envelope"></i><span class="hide-menu">User's</span></a>
                             <ul aria-expanded="false" class="collapse">
-                                <li><a href="ragisteredUser.php">Registered User</a></li>
+                                <li><a href="registeredUser.php">Registered User</a></li>
                                 <li><a href="">Read</a></li>
                                 <li><a href="">Inbox</a></li>
                             </ul>
