@@ -23,7 +23,7 @@ class User extends Model{
     ];
 
 
-    public function user(){
+    public function role(){
 		return $this->belongsTo(Role::class);
 	}
 }
