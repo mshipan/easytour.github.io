@@ -31,4 +31,33 @@ Manager::schema()->create('roles', function ($table) {
 });
 
 
+//Table for Tour Package..........
+Manager::schema()->dropIfExists('toursPackage');
+Manager::schema()->create('toursPackage', function ($table) {
+    $table->increments('id');
+    $table->integer('hotelPackage_id')->unsigned();
+    $table->string('tour_name');
+    $table->string('city');
+    $table->string('country');
+    $table->string('amount');
+    $table->string('description');
+    $table->string('image')->nullable();
+    $table->timestamps();
+});
+
+
+//Table for Hotel Package..........
+Manager::schema()->dropIfExists('hotelsPackage');
+Manager::schema()->create('hotelsPackage', function ($table) {
+    $table->increments('id');
+    $table->string('hotel_name');
+    $table->string('package_name');
+    $table->string('city');
+    $table->string('country');
+    $table->string('amount');
+    $table->string('description');
+    $table->string('image')->nullable();
+    $table->timestamps();
+});
+
 
