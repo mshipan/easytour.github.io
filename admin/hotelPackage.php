@@ -15,7 +15,11 @@ require 'master/header.php';
 			<form action="" method="post">
 				<div class="form-group">
 					<label>Hotel Name</label>
-					<input name="name" type="text" class="form-control" placeholder="Hotel Name">
+					<input name="hotel_name" type="text" class="form-control" placeholder="Hotel Name">
+				</div>
+				<div class="form-group">
+					<label>Package Name</label>
+					<input name="package_name" type="text" class="form-control" placeholder="Package Name">
 				</div>
 				<div class="form-group">
 					<label>City</label>

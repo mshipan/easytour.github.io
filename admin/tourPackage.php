@@ -4,9 +4,9 @@ if ($_SESSION['user']!=1) {
 	header('location:login.php');
 }
 require 'master/header.php';
-	require'../vendor/autoload.php';
+require'../vendor/autoload.php';
 ?>
-<div class="container">
+
 	<div class="row" style="padding-top: 20px;">
 		<div class="col-md-3"></div>
 		<div class="col-md-6">
@@ -31,7 +31,8 @@ require 'master/header.php';
 				</div>
 				<div class="form-group">
 					<label>Description</label>
-					<input name="description" type="text" class="form-control" placeholder="Description">
+					<textarea style="font-family: sans-serif;" rows="7" cols="70"></textarea>
+					<textarea name="textarea-input" id="textarea-input" rows="9" placeholder="Content..." class="form-control"></textarea>
 				</div>
 				<div class="form-group row">
 					<label for="permanent_address" class="col-md-2 col-form-label text-md-right">Profile Image <small style="color: red;">300*200 | Max 1MB</small></label>
@@ -44,5 +45,5 @@ require 'master/header.php';
 		</div>
 		<div class="col-md-3"></div>
 	</div>
-</div>
+
 <?php require 'master/footer.php'; ?>
