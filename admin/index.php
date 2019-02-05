@@ -5,7 +5,7 @@ if ($_SESSION['user']!=1) {
 }
 require 'master/header.php';
 ?>
-<div class="page-wrapper">
+
     <!-- Bread crumb -->
     <div class="row page-titles">
         <div class="col-md-5 align-self-center">
@@ -19,7 +19,7 @@ require 'master/header.php';
     </div>
     <!-- End Bread crumb -->
     <!-- Container fluid  -->
-    <div class="container-fluid">
+
         <!-- Start Page Content -->
         <div class="row">
             <div class="col-md-3">

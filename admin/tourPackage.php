@@ -27,12 +27,13 @@ require'../vendor/autoload.php';
 				</div>
 				<div class="form-group">
 					<label>Amount</label>
-					<input name="amount" type="text" class="form-control" placeholder="Ammount">text
+					<input name="amount" type="text" class="form-control" placeholder="Ammount">
 				</div>
 				<div class="form-group">
 					<label>Description</label>
-					<textarea style="font-family: sans-serif;" rows="7" cols="70"></textarea>
-					<textarea name="textarea-input" id="textarea-input" rows="9" placeholder="Content..." class="form-control"></textarea>
+						<textarea id="myeditablediv" rows="11" cols="70"></textarea>
+
+					
 				</div>
 				<div class="form-group row">
 					<label for="permanent_address" class="col-md-2 col-form-label text-md-right">Profile Image <small style="color: red;">300*200 | Max 1MB</small></label>
@@ -45,5 +46,20 @@ require'../vendor/autoload.php';
 		</div>
 		<div class="col-md-3"></div>
 	</div>
+
+	<script src="https://cloud.tinymce.com/5/tinymce.min.js?apiKey=wey1ni6s7ndtb73g6647wncn0sqa13tu7c2gs0geo6cbwbc9"></script>
+
+  <script type="text/javascript">
+  tinymce.init({
+    selector: '#myeditablediv',
+    height: 500,
+    plugins: [
+        "advlist autolink lists link ",
+        "searchreplace visualblocks code fullscreen",
+        "insertdatetime media table contextmenu paste"
+    ],
+    toolbar: "insertfile undo redo | styleselect | bold italic | alignleft aligncenter alignright alignjustify | bullist numlist outdent indent | link image"
+});
+  </script>
 
 <?php require 'master/footer.php'; ?>
