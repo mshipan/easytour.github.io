@@ -1,10 +1,10 @@
 <?php
 session_start();
 if ($_SESSION['user']!=1) {
-	header('location:login.php');
+header('location:login.php');
 }
 require 'master/header.php';
-	require'../vendor/autoload.php';
+require'../vendor/autoload.php';
 ?>
 <div class="container">
 	<div class="row" style="padding-top: 20px;">
@@ -12,7 +12,7 @@ require 'master/header.php';
 		<div class="col-md-6">
 			<h2> Here Add Hotel Details</h2>
 			<hr>
-			<form action="" method="post">
+			<form action="" method="post" enctype="multipart/form-data">
 				<div class="form-group">
 					<label>Hotel Name</label>
 					<input name="hotel_name" type="text" class="form-control" placeholder="Hotel Name">
@@ -35,7 +35,7 @@ require 'master/header.php';
 				</div>
 				<div class="form-group">
 					<label>Description</label>
-					<textarea class="form-control rounded-0" id="exampleFormControlTextarea1" rows="10"></textarea>
+					<textarea id="myeditablediv" rows="11" cols="70"></textarea>
 				</div>
 				<div class="form-group row">
 					<label for="permanent_address" class="col-md-2 col-form-label text-md-right">Profile Image <small style="color: red;">300*200 | Max 1MB</small></label>
@@ -49,4 +49,17 @@ require 'master/header.php';
 		<div class="col-md-3"></div>
 	</div>
 </div>
+<script src="https://cloud.tinymce.com/5/tinymce.min.js?apiKey=wey1ni6s7ndtb73g6647wncn0sqa13tu7c2gs0geo6cbwbc9"></script>
+<script type="text/javascript">
+tinymce.init({
+selector: '#myeditablediv',
+height: 500,
+plugins: [
+"advlist autolink lists link ",
+"searchreplace visualblocks code fullscreen",
+"insertdatetime media table contextmenu paste"
+],
+toolbar: "insertfile undo redo | styleselect | bold italic | alignleft aligncenter alignright alignjustify | bullist numlist outdent indent | link image"
+});
+</script>
 <?php require 'master/footer.php'; ?>
