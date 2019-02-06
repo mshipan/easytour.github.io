@@ -1,10 +1,34 @@
 <?php
 session_start();
 if ($_SESSION['user']!=1) {
-header('location:login.php');
+	header('location:login.php');
 }
 require 'master/header.php';
 require'../vendor/autoload.php';
+include '../function.php';
+
+if (isset($_POST['submit'])) {
+if ($_SERVER["REQUEST_METHOD"]=="POST") {
+$hotel_name=validator($_POST['hotel_name']);
+$package_name=validator($_POST['package_name']);
+$city=validatorPass($_POST['city']);
+$country=validatorPass($_POST['country']);
+$amount=validator($_POST['amount']);
+$description=validator($_POST['description']);
+$tourPackage=HotelPackage::insert([
+'hotel_name' => $hotel_name,
+'package_name' => $package_name,
+'city' => $city,
+'country' => $country,
+'amount' => $amount,
+'description' => $description,
+]);
+// $msg="Tour Package insert successfully!";
+echo '<script type="text/javascript">
+           window.location = "hotelPackage.php"
+      </script>';
+}
+}
 ?>
 <div class="container">
 	<div class="row" style="padding-top: 20px;">
@@ -35,7 +59,7 @@ require'../vendor/autoload.php';
 				</div>
 				<div class="form-group">
 					<label>Description</label>
-					<textarea id="myeditablediv" rows="11" cols="70"></textarea>
+					<textarea name="description" id="myeditablediv" rows="11" cols="70"></textarea>
 				</div>
 				<div class="form-group row">
 					<label for="permanent_address" class="col-md-2 col-form-label text-md-right">Profile Image <small style="color: red;">300*200 | Max 1MB</small></label>
@@ -43,7 +67,7 @@ require'../vendor/autoload.php';
 						<input type="file" name="image" id="permanent_address" class="form-control" >
 					</div>
 				</div>
-				<button type="submit" name="login" class="btn btn-primary btn-flat m-b-30 m-t-30">Submit</button>
+				<button type="submit" name="submit" class="btn btn-primary btn-flat m-b-30 m-t-30">Submit</button>
 			</form>
 		</div>
 		<div class="col-md-3"></div>

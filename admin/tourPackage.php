@@ -5,13 +5,35 @@ if ($_SESSION['user']!=1) {
 }
 require 'master/header.php';
 require'../vendor/autoload.php';
+include '../function.php';
+
+if (isset($_POST['submit'])) {
+if ($_SERVER["REQUEST_METHOD"]=="POST") {
+$tour_name=validator($_POST['tour_name']);
+$city=validatorPass($_POST['city']);
+$country=validatorPass($_POST['country']);
+$amount=validator($_POST['amount']);
+$description=validator($_POST['description']);
+$tourPackage=TourPackage::insert([
+'tour_name' => $tour_name,
+'city' => $city,
+'country' => $country,
+'amount' => $amount,
+'description' => $description,
+]);
+// $msg="Tour Package insert successfully!";
+echo '<script type="text/javascript">
+           window.location = "tourPackage.php"
+      </script>';
+}
+}
 ?>
 <div class="row" style="padding-top: 20px;">
 	<div class="col-md-3"></div>
 	<div class="col-md-6">
 		<h2> Here Add Tour Details</h2>
 		<hr>
-		<form action="" method="post">
+		<form action="" method="post" enctype="multipart/form-data">
 			<div class="form-group">
 				<label>Tour Package Name</label>
 				<input name="tour_name" type="text" class="form-control" placeholder="Package Name">
@@ -38,7 +60,7 @@ require'../vendor/autoload.php';
 					<input type="file" name="image" id="permanent_address" class="form-control" >
 				</div>
 			</div>
-			<button type="submit" name="login" class="btn btn-primary btn-flat m-b-30 m-t-30">Submit</button>
+			<button type="submit" name="submit" class="btn btn-primary btn-flat m-b-30 m-t-30">Submit</button>
 		</form>
 	</div>
 	<div class="col-md-3"></div>
