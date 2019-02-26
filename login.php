@@ -18,10 +18,8 @@
             header("location:login.php?loginErrMsg=Email or Password incorrect! Try again.");
         }
     }
-    }
-    
-    
- ?>
+}
+?>
 
 
 

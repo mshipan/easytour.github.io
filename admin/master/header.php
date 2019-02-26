@@ -261,7 +261,13 @@
                             <li><a href="tourPackage.php">Add Tour Package</a></li>
                             <li><a href="allTourPackage.php">All Tour Package</a></li>
                         </ul>
-                    </li>
+                        </li>
+                        <li> <a class="has-arrow  " href="#" aria-expanded="false"><i class="fa fa-tachometer"></i><span class="hide-menu">Blog </span></a>
+                            <ul aria-expanded="false" class="collapse">
+                                <li><a href="add-blog.php">Add Blog</a></li>
+                                <li><a href="allHotelPackage.php">All Blog</a></li>
+                            </ul>
+                        </li>
                 </ul>
             </nav>
             <!-- End Sidebar navigation -->

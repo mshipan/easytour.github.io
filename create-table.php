@@ -61,3 +61,14 @@ Manager::schema()->create('hotelsPackage', function ($table) {
 });
 
 
+//Table for Blog..........
+Manager::schema()->dropIfExists('blog');
+Manager::schema()->create('blog', function ($table) {
+    $table->increments('id');
+    $table->string('blog_name');
+    $table->string('description');
+    $table->string('image')->nullable();
+    $table->timestamps();
+});
+
+

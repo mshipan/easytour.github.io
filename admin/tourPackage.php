@@ -14,12 +14,18 @@ $city=validatorPass($_POST['city']);
 $country=validatorPass($_POST['country']);
 $amount=validator($_POST['amount']);
 $description=validator($_POST['description']);
+$image=validator($_POST['image']);
+$image = $_FILES['image']['name'];
+$temp_name = $_FILES['image']['tmp_name'];
+move_uploaded_file($temp_name, "images/tourPackage/$image");
+
 $tourPackage=TourPackage::insert([
 'tour_name' => $tour_name,
 'city' => $city,
 'country' => $country,
 'amount' => $amount,
 'description' => $description,
+'image' => $image,
 ]);
 // $msg="Tour Package insert successfully!";
 echo '<script type="text/javascript">
