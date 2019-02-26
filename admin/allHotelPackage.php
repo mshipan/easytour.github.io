@@ -5,7 +5,7 @@ if ($_SESSION['user']!=1) {
 }
 require 'master/header.php';
 require'../vendor/autoload.php';
-$tours=HotelPackage::all();
+$hotel=HotelPackage::all();
 ?>
 <table class="table">
 	<thead class="thead-dark">
@@ -20,15 +20,15 @@ $tours=HotelPackage::all();
 			<th scope="col">Delete Action</th>
 		</tr>
 	</thead>
-	<?php foreach ($tours as $key => $tour) { ?>
+	<?php foreach ($hotel as $key => $hotel) { ?>
 	<tbody>
 		<tr>
 			<th scope="row">1</th>
-			<td> <?php echo $tour->hotel_name; ?></td>
-			<td> <?php echo $tour->package_name; ?></td>
-			<td> <?php echo $tour->city; ?></td>
-			<td> <?php echo $tour->country; ?></td>
-			<td> <?php echo $tour->amount; ?></td>
+			<td> <?php echo $hotel->hotel_name; ?></td>
+			<td> <?php echo $hotel->package_name; ?></td>
+			<td> <?php echo $hotel->city; ?></td>
+			<td> <?php echo $hotel->country; ?></td>
+			<td> <?php echo $hotel->amount; ?></td>
 			<td> Edit</td>
 			<td> Delete</td>
 		</tr>
