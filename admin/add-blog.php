@@ -11,7 +11,7 @@ if (isset($_POST['submit'])) {
 if ($_SERVER["REQUEST_METHOD"]=="POST") {
 $blog_name=validator($_POST['blog_name']);
 $description=validator($_POST['description']);
-$image=validator($_POST['image']);
+// $image=validator($_POST['image']);
 
 $image = $_FILES['image']['name'];
 $temp_name = $_FILES['image']['tmp_name'];
