@@ -53,7 +53,7 @@ require'../vendor/autoload.php';
 <script type="text/javascript">
 tinymce.init({
 selector: '#myeditablediv',
-height: 500,
+height: 300,
 plugins: [
 "advlist autolink lists link ",
 "searchreplace visualblocks code fullscreen",
