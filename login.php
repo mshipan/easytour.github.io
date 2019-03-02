@@ -12,6 +12,7 @@
         $findUser=User::where('email','=',$email)->where('password','=',$password)->first();
         if ($findUser) {
             $_SESSION['user']=$findUser->name;
+            $_SESSION['user_id']=$findUser->id;
             header("location:blog.php");
         }
         else{
