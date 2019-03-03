@@ -91,6 +91,7 @@ class ComposerStaticInitccb33b6894f419134723bfda1b8381bc
 
     public static $classMap = array (
         'Blog' => __DIR__ . '/../..' . '/Models/Blog.php',
+        'Comment' => __DIR__ . '/../..' . '/Models/Comment.php',
         'HotelPackage' => __DIR__ . '/../..' . '/Models/HotelPackage.php',
         'Role' => __DIR__ . '/../..' . '/Models/Role.php',
         'TourPackage' => __DIR__ . '/../..' . '/Models/TourPackage.php',
