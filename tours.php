@@ -15,7 +15,7 @@ $tours=TourPackage::all();
 						<div class="item_content">
 							<div class="post_images">
 								<a href="single-tour.html" class="woocommerce-LoopProduct-link">
-								<img width="430" height="305" src="admin/images/tourPackage/<?php echo $tour->image; ?>.jpg" class="attachment-shop_catalog size-shop_catalog wp-post-image" alt="You big profit" title="You big profit"></a>
+								<img width="430" height="305" src="<?php echo 'admin/images/tourPackage/'.$tour->image; ?>" class="attachment-shop_catalog size-shop_catalog wp-post-image" alt="You big profit" title="You big profit"></a>
 								
 							</div>
 							<div class="wrapper_content">
