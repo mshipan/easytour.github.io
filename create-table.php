@@ -88,10 +88,28 @@ Manager::schema()->create('toursPackage', function ($table) {
 //     $table->timestamps();
 // });
 
-Manager::schema()->dropIfExists('blog_comments');
-Manager::schema()->create('blog_comments', function ($table) {
+// Manager::schema()->dropIfExists('blog_comments');
+// Manager::schema()->create('blog_comments', function ($table) {
+//     $table->increments('id');
+//     $table->integer('blog_id');
+//     $table->integer('user_id');
+//     $table->longText('text');
+//     $table->timestamps();
+// });
+
+
+Manager::schema()->dropIfExists('chats');
+Manager::schema()->create('chats', function ($table) {
     $table->increments('id');
-    $table->integer('blog_id');
+    $table->integer('user_1');
+    $table->integer('user_2');
+    $table->timestamps();
+});
+
+Manager::schema()->dropIfExists('chat_msgs');
+Manager::schema()->create('chat_msgs', function ($table) {
+    $table->increments('id');
+    $table->integer('chat_id');
     $table->integer('user_id');
     $table->longText('text');
     $table->timestamps();

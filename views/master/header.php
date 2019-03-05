@@ -42,8 +42,21 @@
 						<li><a href="hotels.php">Hotels</a></li>
 						<li><a href="blog.php">Blog</a></li>
 						<li><a href="contact.php">Contact</a></li>
-						<li><a href="login.php">Login</a></li>
-						<li><a href="signup.php">Sign Up</a></li>
+						
+						<?php 
+
+						if(isset($_SESSION['active'])) { ?>
+							<li><a href="chat.php">Chat</a></li>
+							<li><a href="logout.php">Logout</a></li>
+						<?php }else{ ?>
+
+							<li><a href="login.php">Login</a></li>
+							<li><a href="signup.php">Sign Up</a></li>
+						<?php }
+
+						 ?>
+
+						
 						<li class="menu-right">
 							<ul>
 								<li id="travel_social_widget-2" class="widget travel_search">

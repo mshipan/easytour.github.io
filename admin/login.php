@@ -12,6 +12,7 @@ $password = md5(validatorPass($_POST['password']));
 $findUser=User::where('email','=',$email)->where('password','=',$password)->where('role_id','=',1)->first();
 if ($findUser) {
 $_SESSION['user']=$findUser->role_id;
+$_SESSION['user_id']=$findUser->id;
 header("location:index.php");
 }
 else{

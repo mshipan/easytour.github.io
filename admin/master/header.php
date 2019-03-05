@@ -251,7 +251,7 @@
                             <li> <a class="has-arrow  " href="#" aria-expanded="false"><i class="fa fa-envelope"></i><span class="hide-menu">User's</span></a>
                             <ul aria-expanded="false" class="collapse">
                                 <li><a href="registeredUser.php">Registered User</a></li>
-                                <li><a href="">Inbox</a></li>
+                                <li><a href="chat.php">Inbox</a></li>
                             </ul>
                         </li>
                         <li> <a class="has-arrow  " href="#" aria-expanded="false"><i class="fa fa-tachometer"></i><span class="hide-menu">Package </span></a>

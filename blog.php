@@ -1,4 +1,6 @@
-<?php include('views/master/header.php'); 
+<?php 
+session_start();
+include('views/master/header.php'); 
 require'vendor/autoload.php';
 $blogs=Blog::all();
 <<<<<<< HEAD

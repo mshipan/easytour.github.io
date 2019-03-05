@@ -7,6 +7,8 @@ $baseDir = dirname($vendorDir);
 
 return array(
     'Blog' => $baseDir . '/Models/Blog.php',
+    'Chat' => $baseDir . '/Models/Chat.php',
+    'ChatMessage' => $baseDir . '/Models/ChatMessage.php',
     'Comment' => $baseDir . '/Models/Comment.php',
     'HotelPackage' => $baseDir . '/Models/HotelPackage.php',
     'Role' => $baseDir . '/Models/Role.php',
