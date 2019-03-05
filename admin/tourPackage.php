@@ -10,6 +10,8 @@ include '../function.php';
 if (isset($_POST['submit'])) {
 if ($_SERVER["REQUEST_METHOD"]=="POST") {
 $tour_name=validator($_POST['tour_name']);
+$days=validator($_POST['days']);
+$night=validator($_POST['night']);
 $city=validatorPass($_POST['city']);
 $country=validatorPass($_POST['country']);
 $amount=validator($_POST['amount']);
@@ -21,6 +23,8 @@ move_uploaded_file($temp_name, "images/tourPackage/$image");
 
 $tourPackage=TourPackage::insert([
 'tour_name' => $tour_name,
+'days' => $days,
+'night' => $night,
 'city' => $city,
 'country' => $country,
 'amount' => $amount,
@@ -43,6 +47,14 @@ echo '<script type="text/javascript">
 			<div class="form-group">
 				<label>Tour Package Name</label>
 				<input name="tour_name" type="text" class="form-control" placeholder="Package Name">
+			</div>
+			<div class="form-group">
+				<label>Days</label>
+				<input name="days" type="text" class="form-control" placeholder="How many days">
+			</div>
+			<div class="form-group">
+				<label>Night</label>
+				<input name="night" type="text" class="form-control" placeholder="How many night">
 			</div>
 			<div class="form-group">
 				<label>City</label>
