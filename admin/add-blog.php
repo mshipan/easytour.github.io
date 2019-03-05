@@ -11,10 +11,34 @@ if ($_SERVER["REQUEST_METHOD"]=="POST") {
 $blog_name=validator($_POST['blog_name']);
 $description=validator($_POST['description']);
 // $image=validator($_POST['image']);
+<<<<<<< HEAD
 $image = $_FILES['image']['name'];
 $temp_name = $_FILES['image']['tmp_name'];
 move_uploaded_file($temp_name, "images/blog/$image");
 $blog=Blog::insert([
+=======
+
+$doc_path = realpath(dirname(__FILE__));
+$target_dir = "/../images/blog/";
+$target_file = $target_dir . basename($_FILES["image"]["name"]);
+$uploadOk = 1;
+$imageFileType = strtolower(pathinfo($target_file,PATHINFO_EXTENSION));
+
+if (move_uploaded_file($_FILES["image"]["tmp_name"], $doc_path.$target_file)) {
+        echo("The file ". basename( $_FILES["image"]["name"]). " has been uploaded.") ;
+    } else {
+        echo('"Sorry, there was an error uploading your file."') ;
+    }
+
+
+
+
+$image = $_FILES['image']['name'];
+// $temp_name = $_FILES['image']['tmp_name'];
+// move_uploaded_file($temp_name, "images/blog/$image");
+
+$blog=Blog::create([
+>>>>>>> master
 'blog_name' => $blog_name,
 'description' => $description,
 'image' => $image,
@@ -53,7 +77,7 @@ window.location = "add-blog.php"
 		<div class="col-md-3"></div>
 	</div>
 </div>
-<script src="https://cloud.tinymce.com/5/tinymce.min.js?apiKey=wey1ni6s7ndtb73g6647wncn0sqa13tu7c2gs0geo6cbwbc9"></script>
+<!-- <script src="https://cloud.tinymce.com/5/tinymce.min.js?apiKey=wey1ni6s7ndtb73g6647wncn0sqa13tu7c2gs0geo6cbwbc9"></script> -->
 <script type="text/javascript">
 tinymce.init({
 selector: '#myeditablediv',

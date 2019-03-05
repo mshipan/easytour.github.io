@@ -2,7 +2,14 @@
 session_start();
 include('views/master/header.php'); 
 require'vendor/autoload.php';
+<<<<<<< HEAD
 if (isset($_POST['submit'])) {
+=======
+
+
+if (isset($_POST['submit'])) {
+
+>>>>>>> master
     if ($_SERVER["REQUEST_METHOD"]=="POST") {
     $comment=Comment::create([
         'blog_id' => $_POST['blog_id'],
@@ -14,10 +21,24 @@ if (isset($_POST['submit'])) {
     }
 }
 }
+<<<<<<< HEAD
 $blog_id = $_GET['id'];
 $blog=Blog::find($blog_id);
 $dt = new DateTime($blog->created_at);
 $date= $dt->format('M d, Y');
+=======
+
+$blog_id = $_GET['id'];
+
+$blog=Blog::find($blog_id);
+
+$dt = new DateTime($blog->created_at);
+
+$date= $dt->format('M d, Y');
+
+
+
+>>>>>>> master
 ?>
 <div class="site wrapper-content">
 	<div class="top_site_main">
@@ -62,6 +83,10 @@ $date= $dt->format('M d, Y');
 						<div class="col-md-1"></div>
 					</div><br>
 					<?php 
+<<<<<<< HEAD
+=======
+
+>>>>>>> master
 					foreach ($blog->comments->sortByDesc("created_at") as $key => $comment) { ?>
 						<div class="row">
 							<div class="col-md-1"></div>
