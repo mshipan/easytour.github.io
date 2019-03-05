@@ -1,4 +1,6 @@
 <?php 
+
+session_start();
 require'vendor/autoload.php';
 include 'function.php';
 $tours=TourPackage::all();

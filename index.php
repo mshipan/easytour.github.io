@@ -1,4 +1,7 @@
-<?php include('views/master/header.php'); ?>
+<?php
+session_start();
+ include('views/master/header.php');
+ ?>
 
 <div class="site wrapper-content">
 	<div class="home-content" role="main">

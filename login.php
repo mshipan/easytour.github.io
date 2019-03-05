@@ -13,10 +13,12 @@
         if ($findUser) {
             $_SESSION['user']=$findUser->name;
             $_SESSION['user_id']=$findUser->id;
+            $_SESSION['active']=true;
             header("location:blog.php");
         }
         else{
             header("location:login.php?loginErrMsg=Email or Password incorrect! Try again.");
+             $_SESSION['active']=false;
         }
     }
 }
