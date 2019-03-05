@@ -5,7 +5,7 @@ include 'function.php';
 $tours=TourPackage::all();
 ?>
 <?php include('views/master/header.php'); ?>
-	
+		
 	<div class="site wrapper-content">
 		<div class="top_site_main"></div>
 		<section class="content-area">

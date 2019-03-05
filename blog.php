@@ -3,10 +3,7 @@ session_start();
 include('views/master/header.php'); 
 require'vendor/autoload.php';
 $blogs=Blog::all();
-<<<<<<< HEAD
-=======
 
->>>>>>> master
 ?>
 
 <div class="site wrapper-content">
