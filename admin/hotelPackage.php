@@ -13,9 +13,11 @@ $hotel_name=validator($_POST['hotel_name']);
 $package_name=validator($_POST['package_name']);
 $city=validatorPass($_POST['city']);
 $country=validatorPass($_POST['country']);
+$days=validatorPass($_POST['days']);
+$night=validatorPass($_POST['night']);
 $amount=validator($_POST['amount']);
 $description=validator($_POST['description']);
-$image=validator($_POST['image']);
+// $image=validator($_POST['image']);
 
 $image = $_FILES['image']['name'];
 $temp_name = $_FILES['image']['tmp_name'];
@@ -26,6 +28,8 @@ $tourPackage=HotelPackage::insert([
 'package_name' => $package_name,
 'city' => $city,
 'country' => $country,
+'days' => $days,
+'night' => $night,
 'amount' => $amount,
 'description' => $description,
 'image' => $image,
@@ -59,6 +63,14 @@ echo '<script type="text/javascript">
 				<div class="form-group">
 					<label>Country</label>
 					<input name="country" type="text" class="form-control" placeholder="Country">
+				</div>
+				<div class="form-group">
+					<label>Days</label>
+					<input name="days" type="text" class="form-control" placeholder="Days">
+				</div>
+				<div class="form-group">
+					<label>Night</label>
+					<input name="night" type="text" class="form-control" placeholder="Night">
 				</div>
 				<div class="form-group">
 					<label>Amount</label>

@@ -16,7 +16,7 @@ $city=validatorPass($_POST['city']);
 $country=validatorPass($_POST['country']);
 $amount=validator($_POST['amount']);
 $description=validator($_POST['description']);
-$image=validator($_POST['image']);
+// $image=validator($_POST['image']);
 $image = $_FILES['image']['name'];
 $temp_name = $_FILES['image']['tmp_name'];
 move_uploaded_file($temp_name, "images/tourPackage/$image");
