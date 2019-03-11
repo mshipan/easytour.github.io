@@ -11,33 +11,32 @@ $tours=TourPackage::all();
 		<section class="content-area">
 			<div class="container">
 				<?php foreach ($tours as $key => $tour) { ?>
-				<div class="item-tour col-sm-4">
-					<div class="item_border ">
-						<div class="item_content">
-							<div class="post_images">
-								<a href="single-tour.html" class="woocommerce-LoopProduct-link">
-								<img width="430" height="305" src="<?php echo 'admin/images/tourPackage/'.$tour->image; ?>" class="attachment-shop_catalog size-shop_catalog wp-post-image" alt="You big profit" title="You big profit"></a>
-								
-							</div>
-							<div class="wrapper_content">
-								<div class="post_title"><h5>
-									<a href="single-tour.html" style="font-size: 18px; color: #ffb300;" rel="bookmark"><?php echo $tour->tour_name; ?></a>
-									</h5>					
-									<span class="price">
-										<span style="font-size: 18px;" class="woocommerce-Price-amount amount">$<?php echo $tour->amount; ?></span>
-									</span>
-								</div>
-								<p><?php echo $tour->description; ?></p>
-							</div>
-						</div>
-						<div class="read_more">
-							<span class="post_date"><?php echo $tour->days; ?> DAYS - <?php echo $tour->night; ?> Night</span>
-							<div class="item_rating">
-								<i class="fa fa-star"></i><i class="fa fa-star"></i><i class="fa fa-star"></i><i class="fa fa-star"></i><i class="fa fa-star"></i>
+				<div style="margin-bottom: 30px;" class="col-md-4">
+				<div class="item_border item-product">
+					<div class="row">
+						<div class="col-md-4">
+							<div style="height: 270px; width: 350px;">
+								<?php echo "<img src='admin/images/tourPackage/$tour->image'/>"; ?><br>
 							</div>
 						</div>
 					</div>
+					<div class="wrapper_content" style=" margin-left: 10px;">
+						<div class="post_title">
+							<h4>
+							<a href="single_tour.php" rel="bookmark"><?php echo $tour->tour_name; ?></a>
+							</h4>
+							<h6 style="font-size: 18px; color: #000; background: #ffb300; " class="badge badge-info"><?php echo $tour->amount; ?> Tk.</h6>
+						</div>
+						<span class="post_date"><?php echo $tour->days; ?> DAYS <?php echo $tour->night; ?> NIGHTS</span>
+						<div class="description">
+							<p><?php echo $tour->description; ?></p>
+						</div>
+					</div>
+					<div align="center" class="read_more">
+						<a style="text-align: center; margin-top: 4px;" rel="nofollow" href="hotel_details.php?id=<?php echo $tour->id; ?>" class="btn btn-info">Read more</a>
+					</div>
 				</div>
+			</div>
 				<?php } ?>
 			</div>
 		</div>

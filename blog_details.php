@@ -3,16 +3,16 @@ session_start();
 include('views/master/header.php');
 require'vendor/autoload.php';
 if (isset($_POST['submit'])) {
-if ($_SERVER["REQUEST_METHOD"]=="POST") {
-$comment=Comment::create([
-'blog_id' => $_POST['blog_id'],
-'user_id' => $_SESSION['user_id'],
-'text' => $_POST['text'],
-]);
-if (!$comment) {
-	die('something whron');
-}
-}
+	if ($_SERVER["REQUEST_METHOD"]=="POST") {
+		$comment=Comment::create([
+		'blog_id' => $_POST['blog_id'],
+		'user_id' => $_SESSION['user_id'],
+		'text' => $_POST['text'],
+		]);
+		if (!$comment) {
+			die('something whron');
+		}
+	}
 }
 $blog_id = $_GET['id'];
 $blog=Blog::find($blog_id);
