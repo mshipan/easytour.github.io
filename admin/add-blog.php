@@ -11,12 +11,7 @@ if ($_SERVER["REQUEST_METHOD"]=="POST") {
 $blog_name=validator($_POST['blog_name']);
 $description=validator($_POST['description']);
 // $image=validator($_POST['image']);
-<<<<<<< HEAD
-$image = $_FILES['image']['name'];
-$temp_name = $_FILES['image']['tmp_name'];
-move_uploaded_file($temp_name, "images/blog/$image");
-$blog=Blog::insert([
-=======
+
 
 $doc_path = realpath(dirname(__FILE__));
 $target_dir = "/../images/blog/";
@@ -38,7 +33,7 @@ $image = $_FILES['image']['name'];
 // move_uploaded_file($temp_name, "images/blog/$image");
 
 $blog=Blog::create([
->>>>>>> master
+
 'blog_name' => $blog_name,
 'description' => $description,
 'image' => $image,
