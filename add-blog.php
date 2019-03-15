@@ -1,24 +1,23 @@
-<?php
+<?php 
 session_start();
-if ($_SESSION['user']!=1) {
-	header('location:login.php');
-}
-require 'master/header.php';
-require'../vendor/autoload.php';
-include '../function.php';
+require'vendor/autoload.php';
+include 'function.php';
+?>
+<?php include('views/master/header.php'); ?>
+
+<?php
 if (isset($_POST['submit'])) {
 if ($_SERVER["REQUEST_METHOD"]=="POST") {
 $blog_name=validator($_POST['blog_name']);
 $description=validator($_POST['description']);
-// $image=validator($_POST['image']);
 
 $image = $_FILES['image']['name'];
 $temp_name = $_FILES['image']['tmp_name'];
 move_uploaded_file($temp_name, "images/blog/$image");
 
 
-
 $blog=Blog::insert([
+
 'blog_name' => $blog_name,
 'description' => $description,
 'image' => $image,
@@ -30,6 +29,7 @@ window.location = "add-blog.php"
 }
 }
 ?>
+<br><br><br><br>
 <div class="container">
 	<div class="row" style="padding-top: 20px;">
 		<div class="col-md-3"></div>
@@ -71,4 +71,5 @@ plugins: [
 toolbar: "insertfile undo redo | styleselect | bold italic | alignleft aligncenter alignright alignjustify | bullist numlist outdent indent | link image"
 });
 </script>
-<?php require 'master/footer.php'; ?>
+<br><br>
+<?php include('views/master/footer.php'); ?>
