@@ -17,7 +17,7 @@ $blogs=Blog::all();
 							foreach ($blogs as $key => $blog) { ?>
 								<article class="type-post">
 								<div class="img_post"><a href="blog_details.php?id=<?php echo $blog->id; ?>">
-									<img width="370" height="260" src="images/blog/86H.jpg" class="wp-post-image" alt=""></a>
+									<img width="370" height="260" src="<?php echo 'images/blog/'.$blog->image; ?>" class="wp-post-image" alt=""></a>
 								</div>
 								<div class="entry-content content-thumbnail">
 									<header class="entry-header">

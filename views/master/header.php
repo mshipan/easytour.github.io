@@ -47,6 +47,7 @@
 
 						if(isset($_SESSION['active'])) { ?>
 							<li><a href="chat.php">Chat</a></li>
+							<li><a href="add-blog.php">Create Blog</a></li>
 							<li><a href="logout.php">Logout</a></li>
 						<?php }else{ ?>
 

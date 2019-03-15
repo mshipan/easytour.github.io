@@ -113,6 +113,8 @@ session_start();
 						</div>
 						<div class="vc_empty_space" style="height: 80px"><span class="vc_empty_space_inner"></span>
 					</div>
+
+					
 					<div class="shortcode_title shortcode-title-style_2">
 						<h2 class="title_primary">Tour Deals</h2>
 					</div>
