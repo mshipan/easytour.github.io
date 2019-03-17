@@ -120,117 +120,40 @@ session_start();
 					</div>
 					<div class="row wrapper-tours-slider arrow-black">
 						<div class="tours-type-slider content_tour_style_2 list_content" data-dots="true" data-nav="true" data-responsive='{"0":{"items":1}, "480":{"items":2}, "768":{"items":3}, "992":{"items":3}, "1200":{"items":3}}'>
+<?php 
+require'vendor/autoload.php';
+include 'function.php';
+$hotel=HotelPackage::all();
+$tours=TourPackage::all();
+?>
+					<?php foreach ($tours as $key => $tour) { ?>
 							<div class="item-tour">
 								<div class="item_border ">
 									<div class="item_content">
 										<div class="post_images">
 											<a href="single-tour.html" class="woocommerce-LoopProduct-link">
-												<img width="430" height="305" src="images/tour/430x305/tour-3.jpg" class="attachment-shop_catalog size-shop_catalog wp-post-image" alt="You big profit" title="You big profit">
+												<img width="430" height="305" src="<?php echo 'admin/images/tourPackage/'.$tour->image; ?>" class="attachment-shop_catalog size-shop_catalog wp-post-image" alt="You big profit" title="You big profit">
 											</a>
 										</div>
 										<div class="wrapper_content">
 											<div class="post_title"><h5>
-												<a href="single-tour.html" rel="bookmark">Discover Brazil</a>
+												<a href="tour_details.php?id=<?php echo $tour->id; ?>" rel="bookmark"><?php echo $tour->tour_name; ?></a>
 												</h5><span class="price">
-													<span class="text">From</span><span class="woocommerce-Price-amount amount">$93.00</span>			</span>
+													<span class="text">From</span><span class="woocommerce-Price-amount amount"><?php echo $tour->amount; ?> Tk.</span>			</span>
 												</div>
-												<p>Aliquam lacus nisl, viverra convallis sit amet&nbsp;penatibus nunc&nbsp;luctus</p>
+												<p><?php echo $tour->description; ?></p>
 											</div>
 										</div>
 										<div class="read_more">
-											<span class="post_date">5 DAYS - 4 NIGHTS</span>
+											<span class="post_date"><?php echo $tour->days; ?> DAYS <?php echo $tour->night; ?> NIGHTS</span>
 											<div class="item_rating">
 												<i class="fa fa-star"></i><i class="fa fa-star"></i><i class="fa fa-star"></i><i class="fa fa-star"></i><i class="fa fa-star"></i>
 											</div>
 										</div>
 									</div>
 								</div>
-								<div class="item-tour">
-									<div class="item_border">
-										<div class="item_content">
-											<div class="post_images">
-												<a href="single-tour.html" class="travel_tour-LoopProduct-link">
-													<img src="images/tour/430x305/tour-4.jpg" alt="" title="">
-												</a>
-												
-											</div>
-											<div class="wrapper_content">
-												<div class="post_title"><h5>
-													<a href="single-tour.html" rel="bookmark">Anchorage to Ushuaia</a>
-													</h5>
-													<span class="price">
-														<span class="text">From</span><span class="woocommerce-Price-amount amount">$90.00</span>			</span>
-													</span>
-												</div>
-												<p>Aliquam lacus nisl, viverra convallis sit amet&nbsp;penatibus nunc&nbsp;luctus</p>
-											</div>
-										</div>
-										<div class="read_more">
-											<span class="post_date">5 DAYS - 4 NIGHTS</span>
-											<div class="item_rating">
-												<i class="fa fa-star"></i><i class="fa fa-star"></i><i class="fa fa-star"></i><i class="fa fa-star"></i><i class="fa fa-star"></i>
-											</div>
-										</div>
-									</div>
-								</div>
-								<div class="item-tour">
-									<div class="item_border">
-										<div class="item_content">
-											<div class="post_images">
-												<a href="single-tour.html" class="travel_tour-LoopProduct-link">
-													<img src="images/tour/430x305/tour-5.jpg" alt="" title="">
-												</a>
-												
-											</div>
-											<div class="wrapper_content">
-												<div class="post_title"><h5>
-													<a href="single-tour.html" rel="bookmark">Discover Brazil</a>
-													</h5>
-													<span class="price">
-														<span class="text">From</span><span class="travel_tour-Price-amount amount">$94.00</span>
-													</span>
-												</div>
-												<p>Aliquam lacus nisl, viverra convallis sit amet&nbsp;penatibus nunc&nbsp;luctus</p>
-											</div>
-										</div>
-										<div class="read_more">
-											<span class="post_date">5 DAYS - 4 NIGHTS</span>
-											<div class="item_rating">
-												<i class="fa fa-star"></i><i class="fa fa-star"></i><i class="fa fa-star"></i><i class="fa fa-star"></i><i class="fa fa-star"></i>
-											</div>
-										</div>
-									</div>
-								</div>
-								<div class="item-tour">
-									<div class="item_border">
-										<div class="item_content">
-											<div class="post_images">
-												<a href="single-tour.html" class="travel_tour-LoopProduct-link">
-													<span class="onsale">Sale!</span>
-													<img src="images/tour/430x305/tour-1.jpg" alt="" title="">
-												</a>
-												
-											</div>
-											<div class="wrapper_content">
-												<div class="post_title"><h5>
-													<a href="single-tour.html" rel="bookmark">Kiwiana Panorama</a>
-													</h5><span class="price"><del>
-														<span class="travel_tour-Price-amount amount">$87.00</span>
-														</del>
-														<ins><span class="travel_tour-Price-amount amount">$82.00</span></ins>
-													</span>
-												</div>
-												<p>Aliquam lacus nisl, viverra convallis sit amet&nbsp;penatibus nunc&nbsp;luctus</p>
-											</div>
-										</div>
-										<div class="read_more">
-											<span class="post_date">5 DAYS - 4 NIGHTS</span>
-											<div class="item_rating">
-												<i class="fa fa-star"></i><i class="fa fa-star"></i><i class="fa fa-star"></i><i class="fa fa-star"></i><i class="fa fa-star"></i>
-											</div>
-										</div>
-									</div>
-								</div>
+
+				<?php } ?>
 							</div>
 						</div>
 						<div class="vc_empty_space" style="height: 60px"><span class="vc_empty_space_inner"></span>
@@ -243,169 +166,39 @@ session_start();
 		<div class="row">
 			<div class="col-sm-12">
 				<div class="shortcode_title shortcode-title-style_3">
-					<h2 class="title_primary">Most popular tours</h2>
+					<h2 class="title_primary">Most popular Hotels</h2>
 					<div class="title_subtitle">
 						<a href="tours.html">View All Tours</a></div>
 					</div>
 					<div class="row wrapper-tours-slider">
 						<div class="list_content content_tour_style_2 tours-type-pain">
+						<?php foreach ($hotel as $key => $hotel) { ?>
 							<div class="item-tour col-sm-4">
 								<div class="item_border ">
 									<div class="item_content">
 										<div class="post_images">
 											<a href="single-tour.html" class="woocommerce-LoopProduct-link">
-											<img width="430" height="305" src="images/tour/tour-1.jpg" class="attachment-shop_catalog size-shop_catalog wp-post-image" alt="You big profit" title="You big profit"></a>
+											<img width="430" height="305" src="<?php echo 'admin/images/hotelPackage/'.$tour->image; ?>" class="attachment-shop_catalog size-shop_catalog wp-post-image" alt="You big profit" title="You big profit"></a>
 											
 										</div>
 										<div class="wrapper_content">
 											<div class="post_title"><h5>
-												<a href="single-tour.html" rel="bookmark">Discover Brazil</a>
+												<a href="hotel_details.php?id=<?php echo $hotel->id; ?>" rel="bookmark"><?php echo $hotel->package_name; ?></a>
 												</h5><span class="price">
-													<span class="text">From</span><span class="woocommerce-Price-amount amount">$93.00</span></span>
+													<span class="text">From</span><span class="woocommerce-Price-amount amount"><?php echo $hotel->amount; ?> Tk.</span></span>
 												</div>
 												<p>Aliquam lacus nisl, viverra convallis sit amet&nbsp;penatibus nunc&nbsp;luctus</p>
 											</div>
 										</div>
 										<div class="read_more">
-											<span class="post_date">5 DAYS - 4 NIGHTS</span>
+											<span class="post_date"><?php echo $hotel->days; ?> DAYS <?php echo $hotel->night; ?> NIGHTS</span>
 											<div class="item_rating">
 												<i class="fa fa-star"></i><i class="fa fa-star"></i><i class="fa fa-star"></i><i class="fa fa-star"></i><i class="fa fa-star"></i>
 											</div>
 										</div>
 									</div>
 								</div>
-								<div class="item-tour col-sm-4">
-									<div class="item_border ">
-										<div class="item_content">
-											<div class="post_images">
-												<a href="single-tour.html" class="woocommerce-LoopProduct-link">
-												<img width="430" height="305" src="images/tour/tour-2.jpg" class="attachment-shop_catalog size-shop_catalog wp-post-image" alt="You big profit" title="You big profit"></a>
-												
-											</div>
-											<div class="wrapper_content">
-												<div class="post_title"><h5>
-													<a href="single-tour.html" rel="bookmark">Kiwiana Panorama</a>
-													</h5>					<span class="price">
-														<del>
-														<span class="woocommerce-Price-amount amount">$87.00</span>
-														</del> <ins>
-														<span class="woocommerce-Price-amount amount">$82.00</span>
-													</ins>			</span>
-												</div>
-												<p>Aliquam lacus nisl, viverra convallis sit amet&nbsp;penatibus nunc&nbsp;luctus</p>
-											</div>
-										</div>
-										<div class="read_more">
-											<span class="post_date">2 DAYS - 1 NIGHTS</span>
-											<div class="item_rating">
-												<i class="fa fa-star"></i><i class="fa fa-star"></i><i class="fa fa-star"></i><i class="fa fa-star"></i><i class="fa fa-star-o"></i>
-											</div>
-										</div>
-									</div>
-								</div>
-								<div class="item-tour col-sm-4">
-									<div class="item_border ">
-										<div class="item_content">
-											<div class="post_images">
-												<a href="single-tour.html" class="woocommerce-LoopProduct-link">
-												<img width="430" height="305" src="images/tour/tour-3.jpg" class="attachment-shop_catalog size-shop_catalog wp-post-image" alt="You big profit" title="You big profit"></a>
-												
-											</div>
-											<div class="wrapper_content">
-												<div class="post_title"><h5>
-													<a href="single-tour.html" rel="bookmark">Anchorage to Quito</a>
-													</h5>
-													<span class="price">
-														<span class="text">From</span><span class="woocommerce-Price-amount amount">$64.00</span>
-													</span>
-												</div>
-												<p>Aliquam lacus nisl, viverra convallis sit amet&nbsp;penatibus nunc&nbsp;luctus</p>
-											</div>
-										</div>
-										<div class="read_more">
-											<span class="post_date">6 DAYS - 6 NIGHTS</span>
-											<div class="item_rating">
-												<i class="fa fa-star"></i><i class="fa fa-star"></i><i class="fa fa-star"></i><i class="fa fa-star"></i><i class="fa fa-star"></i>
-											</div>
-										</div>
-									</div>
-								</div>
-								<div class="item-tour col-sm-4">
-									<div class="item_border ">
-										<div class="item_content">
-											<div class="post_images">
-												<a href="single-tour.html" class="woocommerce-LoopProduct-link">
-												<img width="430" height="305" src="images/tour/tour-4.jpg" class="attachment-shop_catalog size-shop_catalog wp-post-image" alt="You big profit" title="You big profit"></a>
-												
-											</div>
-											<div class="wrapper_content">
-												<div class="post_title"><h5>
-													<a href="single-tour.html" rel="bookmark">Anchorage to La Paz</a>
-													</h5>					<span class="price">
-														<span class="text">From</span><span class="woocommerce-Price-amount amount">$434.00</span>			</span>
-													</div>
-													<p>Aliquam lacus nisl, viverra convallis sit amet&nbsp;penatibus nunc&nbsp;luctus</p>
-												</div>
-											</div>
-											<div class="read_more">
-												<span class="post_date">6 DAYS - 5 NIGHTS</span>
-												<div class="item_rating">
-													<div class="star-rating" title=""><span style="width:0"></span>
-												</div>
-											</div>
-										</div>
-									</div>
-								</div>
-								<div class="item-tour col-sm-4">
-									<div class="item_border ">
-										<div class="item_content">
-											<div class="post_images">
-												<a href="single-tour.html" class="woocommerce-LoopProduct-link">
-												<img width="430" height="305" src="images/tour/tour-5.jpg" class="attachment-shop_catalog size-shop_catalog wp-post-image" alt="You big profit" title="You big profit"></a>
-												
-											</div>
-											<div class="wrapper_content">
-												<div class="post_title"><h5>
-													<a href="single-tour.html" rel="bookmark">Cuzco to Anchorage</a>
-													</h5>					<span class="price">
-														<span class="text">From</span><span class="woocommerce-Price-amount amount">$345.00</span>			</span>
-													</div>
-													<p>Aliquam lacus nisl, viverra convallis sit amet&nbsp;penatibus nunc&nbsp;luctus</p>
-												</div>
-											</div>
-											<div class="read_more">
-												<span class="post_date">1 DAYS - 9 HOURS</span>
-												<div class="item_rating">
-													<i class="fa fa-star"></i><i class="fa fa-star"></i><i class="fa fa-star"></i><i class="fa fa-star"></i><i class="fa fa-star"></i>
-												</div>
-											</div>
-										</div>
-									</div>
-									<div class="item-tour col-sm-4">
-										<div class="item_border ">
-											<div class="item_content">
-												<div class="post_images">
-													<a href="single-tour.html" class="woocommerce-LoopProduct-link">
-													<img width="430" height="305" src="images/tour/tour-6.jpg" class="attachment-shop_catalog size-shop_catalog wp-post-image" alt="You big profit" title="You big profit"></a>
-													
-												</div>
-												<div class="wrapper_content">
-													<div class="post_title"><h5>
-														<a href="single-tour.html" rel="bookmark">Anchorage to Ushuaia</a>
-														</h5>					<span class="price">
-															<span class="text">From</span><span class="woocommerce-Price-amount amount">$78.00</span>			</span>
-														</div>
-														<p>Aliquam lacus nisl, viverra convallis sit amet&nbsp;penatibus nunc&nbsp;luctus</p>
-													</div>
-												</div>
-												<div class="read_more">
-													<span class="post_date">3 DAYS - 2 NIGHTS</span>
-													<div class="item_rating">
-														<i class="fa fa-star"></i><i class="fa fa-star"></i><i class="fa fa-star"></i><i class="fa fa-star"></i><i class="fa fa-star"></i>
-													</div>
-												</div>
-											</div>
-										</div>
+								<?php } ?>
 									</div>
 								</div>
 							</div>

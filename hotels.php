@@ -22,13 +22,18 @@ $hotel=HotelPackage::all();
 					<div class="wrapper_content" style=" margin-left: 10px;">
 						<div class="post_title">
 							<h4>
-							<a href="single_tour.php" rel="bookmark"><?php echo $hotel->package_name; ?></a>
+							<a href="#" rel="bookmark"><?php echo $hotel->package_name; ?></a>
 							</h4>
 							<h6 style="font-size: 18px; color: #000; background: #ffb300; " class="badge badge-info"><?php echo $hotel->amount; ?> Tk.</h6>
 						</div>
 						<span class="post_date"><?php echo $hotel->days; ?> DAYS <?php echo $hotel->night; ?> NIGHTS</span>
 						<div class="description">
-							<p><?php echo $hotel->description; ?></p>
+						<?php 
+						$des = wordwrap($hotel->description, 100, "\n", true);
+						$des = htmlentities($des);
+						$des = nl2br($des);
+						?>
+							<p><?php echo $des; ?></p>
 						</div>
 					</div>
 					<div align="center" class="read_more">
