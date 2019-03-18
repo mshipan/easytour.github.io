@@ -15,7 +15,7 @@ foreach ($users as $key => $user) {
 			<div class="card-header user-header alt bg-dark">
 				<div class="media">
 					<a href="#">
-						<img class="align-self-center rounded-circle mr-3" style="width:85px; height:85px;" alt="" src="images/user-1.png">
+						<img class="align-self-center rounded-circle mr-3" style="width:85px; height:85px;" alt="" src="<?php echo 'admin/images/users/'.$user->image; ?>">
 					</a>
 					<div class="media-body">
 						<p class="lead text-success" ><?php echo $user->name; ?></p>
