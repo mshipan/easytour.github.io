@@ -15,6 +15,7 @@ if (isset($_POST['send'])) {
       'user_id' =>$_SESSION['user_id'],
       'text' =>$_POST['text']
     ]);
+    header('location:chat.php');
    }
 }
 

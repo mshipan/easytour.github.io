@@ -22,6 +22,19 @@ if (isset($_POST['send'])) {
       'user_id' =>$_SESSION['user_id'],
       'text' =>$_POST['text']
     ]);
+    $url='chat.php?client_id='.$cid;
+    if (!headers_sent())
+    {    
+        header('Location: '.$url);
+        exit;
+        }
+    else
+        {  
+        echo '<script type="text/javascript">';
+        echo 'window.location.href="'.$url.'";';
+        echo '</script>';
+       
+    }
    }
 }
 
@@ -32,6 +45,19 @@ if (isset($_POST['create'])) {
       'user_1'=>$_POST['user_1'],
       'user_2' =>$_SESSION['user_id']
     ]);
+    $url='chat.php';
+    if (!headers_sent())
+    {    
+        header('Location: '.$url);
+        exit;
+        }
+    else
+        {  
+        echo '<script type="text/javascript">';
+        echo 'window.location.href="'.$url.'";';
+        echo '</script>';
+        
+    }
    }
 }
 
