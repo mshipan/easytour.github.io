@@ -1,7 +1,7 @@
 <?php
     require'vendor/autoload.php';
     include 'function.php';
-    $tours=Booking::all();
+    // $tours=Booking::all();
  ?>
 <?php include('views/master/header.php'); ?>
 <!-- always need start -->
