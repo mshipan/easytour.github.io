@@ -23,17 +23,19 @@ $tours=TourPackage::all();
 					<div class="wrapper_content" style=" margin-left: 10px;">
 						<div class="post_title">
 							<h4>
-							<a href="hotel_details.php?id=<?php echo $tour->id; ?>" rel="bookmark"><?php echo $tour->tour_name; ?></a>
+							<a href="hotel_details.php?id=<?php echo $tour->id; ?>" rel="bookmark"><?php echo $tour->tour_name; ?></a> <br><br>ID:<?php echo $tour->id; ?>
 							</h4>
 							<h6 style="font-size: 18px; color: #000; background: #ffb300; " class="badge badge-info"><?php echo $tour->amount; ?> Tk.</h6>
 						</div>
 						<span class="post_date"><?php echo $tour->days; ?> DAYS <?php echo $tour->night; ?> NIGHTS</span>
 						<div class="description">
-							<p><?php echo $tour->description; ?></p>
+							<p><?php echo str_limit($tour->description, 100); ?></p>
 						</div>
 					</div>
 					<div align="center" class="read_more">
 						<a style="text-align: center; margin-top: 4px;" rel="nofollow" href="tour_details.php?id=<?php echo $tour->id; ?>" class="btn btn-info">Read more</a>
+						<a style="text-align: center; margin-top: 4px;" rel="nofollow" href="booking.php ?>" class="btn btn-info">Booking</a>
+
 					</div>
 				</div>
 			</div>

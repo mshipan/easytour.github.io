@@ -141,7 +141,7 @@ $tours=TourPackage::all();
 												</h5><span class="price">
 													<span class="text">From</span><span class="woocommerce-Price-amount amount"><?php echo $tour->amount; ?> Tk.</span>			</span>
 												</div>
-												<p><?php echo $tour->description; ?></p>
+												<p><?php echo str_limit($tour->description, 100); ?></p>
 											</div>
 										</div>
 										<div class="read_more">
@@ -187,7 +187,7 @@ $tours=TourPackage::all();
 												</h5><span class="price">
 													<span class="text">From</span><span class="woocommerce-Price-amount amount"><?php echo $hotel->amount; ?> Tk.</span></span>
 												</div>
-												<p>Aliquam lacus nisl, viverra convallis sit amet&nbsp;penatibus nunc&nbsp;luctus</p>
+												<p><?php echo str_limit($hotel->description, 100); ?></p>
 											</div>
 										</div>
 										<div class="read_more">
