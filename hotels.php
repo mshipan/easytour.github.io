@@ -28,12 +28,8 @@ $hotel=HotelPackage::all();
 						</div>
 						<span class="post_date"><?php echo $hotel->days; ?> DAYS <?php echo $hotel->night; ?> NIGHTS</span>
 						<div class="description">
-						<?php 
-						$des = wordwrap($hotel->description, 100, "\n", true);
-						$des = htmlentities($des);
-						$des = nl2br($des);
-						?>
-							<p><?php echo $des; ?></p>
+						
+							<p><?php echo str_limit($hotel->description, 100); ?></p>
 						</div>
 					</div>
 					<div align="center" class="read_more">
