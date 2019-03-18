@@ -1,7 +1,32 @@
 <?php
     require'vendor/autoload.php';
     include 'function.php';
-    // $tours=Booking::all();
+
+
+    if (isset($_POST['submit'])) {
+    if ($_SERVER["REQUEST_METHOD"]=="POST") {
+    $full_name=validator($_POST['full_name']);
+    $email=validator($_POST['email']);
+    $phone=validator($_POST['phone']);
+    $package=validator($_POST['package']);
+    $hotel_name=validator($_POST['hotel_name']);
+    $tour_id=validator($_POST['tour_id']);
+    $txnid=validator($_POST['txnid']);
+
+    $tourPackage=Booking::insert([
+    'full_name' => $full_name,
+    'email' => $email,
+    'phone' => $phone,
+    'package' => $package,
+    'hotel_name' => $hotel_name,
+    'tour_id' => $tour_id,
+    'txnid' => $txnid,
+    ]);
+    echo '<script type="text/javascript">
+               window.location = "booking.php"
+          </script>';
+     }
+    }
  ?>
 <?php include('views/master/header.php'); ?>
 <!-- always need start -->
@@ -25,7 +50,7 @@
                                                     <div class="form-group row">
                                                         <label for="full_name" class="col-md-2 col-form-label text-md-right">Full Name </label>
                                                         <div class="col-md-8">
-                                                            <input type="text" id="full_name" class="form-control" name="name" required>
+                                                            <input type="text" id="full_name" class="form-control" name="full_name" required>
                                                         </div>
                                                     </div>
                                                     <div class="form-group row">
@@ -63,16 +88,15 @@
                                                             <input type="text" name="tour_id" id="present_address" class="form-control" >
                                                         </div>
                                                     </div>
-                                                    
-                                                    
+
                                                     <div class="form-group row">
-                                                        <label for="nid_number" class="col-md-2 col-form-label text-md-right"></label>
+                                                        <label for="present_address" class="col-md-2 col-form-label text-md-right">Transaction ID</label>
                                                         <div class="col-md-8">
-                                                            <button name="registration" type="submit" class="btn btn-primary">
-                                                        Confirm
-                                                        </button>
+                                                            <input type="text" name="txnid" id="present_address" class="form-control" >
                                                         </div>
                                                     </div>
+
+                                                    <button type="submit" name="submit" class="btn btn-primary btn-flat m-b-30 m-t-30">Submit</button>
                                                     
                                                 </form>
                                             </div>
