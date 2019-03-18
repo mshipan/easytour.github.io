@@ -32,6 +32,22 @@ use Illuminate\Database\Capsule\Manager;
 
 
 //Table for Tour Package..........
+<<<<<<< HEAD
+Manager::schema()->dropIfExists('toursPackage');
+Manager::schema()->create('toursPackage', function ($table) {
+    $table->increments('id');
+    $table->integer('hotelPackage_id')->unsigned();
+    $table->string('tour_name');
+    $table->string('days');
+    $table->string('night');
+    $table->string('city');
+    $table->string('country');
+    $table->string('amount');
+    $table->string('description');
+    $table->string('image')->nullable();
+    $table->timestamps();
+});
+=======
 // Manager::schema()->dropIfExists('toursPackage');
 // Manager::schema()->create('toursPackage', function ($table) {
 //     $table->increments('id');
@@ -44,6 +60,7 @@ use Illuminate\Database\Capsule\Manager;
 //     $table->string('image')->nullable();
 //     $table->timestamps();
 // });
+>>>>>>> master
 
 
 // //Table for Hotel Package..........
@@ -93,6 +110,16 @@ Manager::schema()->dropIfExists('chat_msgs');
 Manager::schema()->create('chat_msgs', function ($table) {
     $table->increments('id');
     $table->integer('chat_id');
+    $table->integer('user_id');
+    $table->longText('text');
+    $table->timestamps();
+});
+
+
+Manager::schema()->dropIfExists('blog_comments');
+Manager::schema()->create('blog_comments', function ($table) {
+    $table->increments('id');
+    $table->integer('blog_id');
     $table->integer('user_id');
     $table->longText('text');
     $table->timestamps();
