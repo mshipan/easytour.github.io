@@ -114,6 +114,7 @@ Manager::schema()->create('booking', function ($table) {
     $table->string('package');
     $table->string('hotel_name');
     $table->integer('tour_id');
+    $table->string('txnid');
     $table->timestamps();
 });
 

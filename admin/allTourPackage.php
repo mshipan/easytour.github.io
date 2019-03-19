@@ -22,13 +22,13 @@ $tours=TourPackage::all();
 	<?php foreach ($tours as $key => $tour) { ?>
 	<tbody>
 		<tr>
-			<th scope="row">1</th>
+			<th scope="row"><?php echo $tour->id; ?></th>
 			<td> <?php echo $tour->tour_name; ?></td>
 			<td> <?php echo $tour->city; ?></td>
 			<td> <?php echo $tour->country; ?></td>
 			<td> <?php echo $tour->amount; ?></td>
-			<td> Edit</td>
-			<td> Delete</td>
+			<td> <a href="editTourPackage.php?id=<?php echo $tour->id; ?>" class="btn btn-info">Edit</a></td>
+			<td> <a href="allTourlPackage.php?id=<?php echo $tour->id; ?>" class="btn btn-danger"> Delete</a></td>
 		</tr>
 	</tbody>
 	<?php } ?>

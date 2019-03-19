@@ -23,14 +23,14 @@ $hotel=HotelPackage::all();
 	<?php foreach ($hotel as $key => $hotel) { ?>
 	<tbody>
 		<tr>
-			<th scope="row">1</th>
+			<th scope="row"><?php echo $hotel->id; ?></th>
 			<td> <?php echo $hotel->hotel_name; ?></td>
 			<td> <?php echo $hotel->package_name; ?></td>
 			<td> <?php echo $hotel->city; ?></td>
 			<td> <?php echo $hotel->country; ?></td>
 			<td> <?php echo $hotel->amount; ?></td>
-			<td> Edit</td>
-			<td> Delete</td>
+			<td> <a href="allHotelPackage.php?id=<?php echo $hotel->id; ?>" class="btn btn-info">Edit</a></td>
+			<td> <a href="allHotelPackage.php?id=<?php echo $hotel->id; ?>" class="btn btn-danger"> Delete</a></td>
 		</tr>
 	</tbody>
 	<?php } ?>
