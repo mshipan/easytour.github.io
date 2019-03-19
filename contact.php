@@ -28,7 +28,7 @@ session_start();
 			</ul>
 		</div>
 	</div>
-	<div class="wpb_wrapper pages_content">
+<!-- 	<div class="wpb_wrapper pages_content">
 		<h4>Have a question?</h4>
 		<div role="form" class="wpcf7">
 			<div class="screen-reader-response"></div>
@@ -60,7 +60,7 @@ session_start();
 				</div>
 			</form>
 		</div>
-	</div>
+	</div> -->
 </div>
 <div class="col-sm-1"></div>
 </div>
