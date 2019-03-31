@@ -54,7 +54,6 @@
 							<li><a href="login.php">Login</a></li>
 							<li><a href="signup.php">Sign Up</a></li>
 						<?php }
-
 						 ?>
 
 						
@@ -68,8 +67,8 @@
 									</div>
 									<div class="search-menu search-overlay search-hidden">
 										<div class="closeicon"></div>
-										<form method="get" class="search-form" action="http://html.physcode.com/travel/tours.html">
-											<input type="search" class="search-field" placeholder="Search ..." value="" name="s" title="Search for:">
+										<form method="post" class="search-form" action="">
+											<input type="search" class="search-field" placeholder="Search ..." value="" name="search" title="Search for:">
 											<input type="submit" class="search-submit font-awesome" value="&#xf002;">
 										</form>
 										<div class="background-overlay"></div>
@@ -77,10 +76,34 @@
 								</li>
 							</ul>
 						</li>
+						<?php print('$output'); ?>
 					</ul>
 				</nav>
 			</div>
 		</div>
 	</header>
 
+<?php 
+ 	mysqli_select_db('search_test') or die('could not find in db!!');
+ 	$output = '';
+ 	if (isset($_POST['search'])) {
+ 		$searchq = $_POST['searchq'];
+ 		$searchq = preg_replace('#[^0-9a-z]#i', '', $searchq);
+
+ 		$query = mysqli_query("SELECT * FROM toursPackage WHERE tour_name like '%$searchq%' OR city like '%$searchq%'") or die('could not search!!');
+ 		$count = mysqli_num_rows($query);
+
+ 		if ($count==0) {
+ 			$output = 'There was no search results.';
+ 		}else{
+ 			while($row = mysqli_fetch_array($query));
+ 			$tour_name = $row['tour_name'];
+ 			$city = $row['city'];
+ 			$id = $row ['id'];
+
+ 			$output .= '<div>'.$tour_name.' '.$city.'</div>';
+ 		}
+
+ 	}
+?>
 

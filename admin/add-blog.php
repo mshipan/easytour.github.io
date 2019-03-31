@@ -6,28 +6,28 @@ if ($_SESSION['user']!=1) {
 require 'master/header.php';
 require'../vendor/autoload.php';
 include '../function.php';
-if (isset($_POST['submit'])) {
-if ($_SERVER["REQUEST_METHOD"]=="POST") {
-$blog_name=validator($_POST['blog_name']);
-$description=validator($_POST['description']);
-// $image=validator($_POST['image']);
+		if (isset($_POST['submit'])) {
+		if ($_SERVER["REQUEST_METHOD"]=="POST") {
+		$blog_name=validator($_POST['blog_name']);
+		$description=validator($_POST['description']);
+		// $image=validator($_POST['image']);
 
-$image = $_FILES['image']['name'];
-$temp_name = $_FILES['image']['tmp_name'];
-move_uploaded_file($temp_name, "images/blog/$image");
+		$image = $_FILES['image']['name'];
+		$temp_name = $_FILES['image']['tmp_name'];
+		move_uploaded_file($temp_name, "images/blog/$image");
 
 
 
-$blog=Blog::insert([
-'blog_name' => $blog_name,
-'description' => $description,
-'image' => $image,
-]);
-// $msg="Tour Package insert successfully!";
-echo '<script type="text/javascript">
-window.location = "add-blog.php"
-</script >';
-}
+		$blog=Blog::insert([
+		'blog_name' => $blog_name,
+		'description' => $description,
+		'image' => $image,
+		]);
+		// $msg="Tour Package insert successfully!";
+		echo '<script type="text/javascript">
+		window.location = "add-blog.php"
+		</script >';
+	}
 }
 ?>
 <div class="container">
