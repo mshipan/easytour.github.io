@@ -15,7 +15,30 @@ if (isset($_POST['registration'])) {
     $zip=validator($_POST['zip']);
     $password=md5(validatorPass($_POST['password']));
 
-    $user=User::insert([
+    
+
+
+    $target_dir = "images/";
+    $target_dir1 = "admin/images/users/";
+    $target_file = $target_dir . basename($_FILES["image"]["name"]);
+    $uploadOk = 1;
+    $imageFileType = strtolower(pathinfo($target_file,PATHINFO_EXTENSION));
+
+    $ext = substr(strrchr($_FILES['image']['name'], "."), 1);//get extension of uploading imagge
+    $new_name = md5(rand() * time()) . ".$ext"; //rename the image
+
+    // if (move_uploaded_file($_FILES["image"]["tmp_name"], $target_dir.$new_name)) {
+    //     echo "The file ". basename( $_FILES["image"]["name"]). " has been uploaded.";
+    // } else {
+    //     echo "Sorry, there was an error uploading your file.";
+    // }
+    if (move_uploaded_file($_FILES["image"]["tmp_name"], $target_dir1.$new_name)) {
+        echo "The file ". basename( $_FILES["image"]["name"]). " has been uploaded.";
+    } else {
+        echo "Sorry, there was an error uploading your file.";
+    }
+
+    $user=User::create([
         'name' => $name,
         'email' => $email,
         'phone' => $phone,
@@ -25,10 +48,23 @@ if (isset($_POST['registration'])) {
         'country' => $country,
         'zip_code' => $zip,
         'password' => $password,
+        'image' =>$new_name,
     ]);
     $msg="Registration succesfull please login now!";
     header('location:login.php?msg='.$msg);
     }
+
+
+
+
+
+
+
+
+
+
+
+
 }
 
  ?>
@@ -50,7 +86,7 @@ if (isset($_POST['registration'])) {
                                     <div class="col-md-9">
                                         <div class="card">
                                             <div class="card-body">
-                                                <form  action="" method="post">
+                                                <form  action="" method="post" enctype="multipart/form-data">
                                                     <div class="form-group row">
                                                         <label for="full_name" class="col-md-2 col-form-label text-md-right">Full Name </label>
                                                         <div class="col-md-8">
