@@ -92,7 +92,7 @@ echo '<script type="text/javascript">
 		<div class="col-md-3"></div>
 	</div>
 </div>
-<script src="https://cloud.tinymce.com/5/tinymce.min.js?apiKey=wey1ni6s7ndtb73g6647wncn0sqa13tu7c2gs0geo6cbwbc9"></script>
+<!-- <script src="https://cloud.tinymce.com/5/tinymce.min.js?apiKey=wey1ni6s7ndtb73g6647wncn0sqa13tu7c2gs0geo6cbwbc9"></script>
 <script type="text/javascript">
 tinymce.init({
 selector: '#myeditablediv',
@@ -104,5 +104,5 @@ plugins: [
 ],
 toolbar: "insertfile undo redo | styleselect | bold italic | alignleft aligncenter alignright alignjustify | bullist numlist outdent indent | link image"
 });
-</script>
+</script> -->
 <?php require 'master/footer.php'; ?>

@@ -7,32 +7,38 @@ require 'master/header.php';
 require'../vendor/autoload.php';
 include '../function.php';
 
-
+$id = $_GET['id'];
+$tours=TourPackage::find($id);
 if (isset($_POST['update'])) {
-if ($_SERVER["REQUEST_METHOD"]=="POST") {
+	if ($_SERVER["REQUEST_METHOD"]=="POST") {
+		
+		$tourPackage=TourPackage::find($id);
+		
+		echo $image=$tourPackage->image;
+		if (isset($_FILES['image'])) {
+			$image = $_FILES['image']['name'];
+			$temp_name = $_FILES['image']['tmp_name'];
+			move_uploaded_file($temp_name, "images/tourPackage/$image");
+		}
+		
 
-$id = $_GET('id');
-$image = $_FILES['image']['name'];
-$temp_name = $_FILES['image']['tmp_name'];
-move_uploaded_file($temp_name, "images/tourPackage/$image");
+		$tourPackage->update([
+		'tour_name' => $_POST['tour_name'],
+		'days' =>$_POST['days'] ,
+		'night' => $_POST['night'] ,
+		'city' => $_POST['city'] ,
+		'country' => $_POST['country'] ,
+		'amount' => $_POST['amount'] ,
+		'description' => $_POST['description'] ,
+		'image' => $image,
+		]);
+		$msg="Tour Package insert successfully!";
+		echo '<script type="text/javascript">
+		window.location = "allTourPackage.php"
+		</script>';
+	}
+}
 
-$tourPackage=TourPackage::find()->update([
-'tour_name' => $tour_name,
-'days' => $days,
-'night' => $night,
-'city' => $city,
-'country' => $country,
-'amount' => $amount,
-'description' => $description,
-'image' => $image,
-]);
-// $msg="Tour Package insert successfully!";
-echo '<script type="text/javascript">
-window.location = "tourPackage.php"
-</script>';
-}
-}
-$tours=TourPackage::first();
 ?>
 <div class="row" style="padding-top: 20px;">
 	<div class="col-md-3"></div>
@@ -41,32 +47,31 @@ $tours=TourPackage::first();
 		<hr>
 		<form action="" method="post" enctype="multipart/form-data">
 			<div class="form-group">
-				<label>ID</label>
-				<input name="id" type="hidden" class="form-control" placeholder="<?php echo $tours->id; ?>">
+				<input name="id" type="hidden" class="form-control" value="<?php echo $tours->id; ?>">
 			</div>
 			<div class="form-group">
 				<label>Tour Package Name</label>
-				<input name="tour_name" type="text" class="form-control" placeholder="<?php echo $tours->tour_name; ?>">
+				<input name="tour_name" type="text" class="form-control" value="<?php echo $tours->tour_name; ?>">
 			</div>
 			<div class="form-group">
 				<label>Days</label>
-				<input name="days" type="text" class="form-control" placeholder="<?php echo $tours->days; ?>">
+				<input name="days" type="text" class="form-control" value="<?php echo $tours->days; ?>">
 			</div>
 			<div class="form-group">
 				<label>Night</label>
-				<input name="night" type="text" class="form-control" placeholder="<?php echo $tours->night; ?>">
+				<input name="night" type="text" class="form-control" value="<?php echo $tours->night; ?>">
 			</div>
 			<div class="form-group">
 				<label>City</label>
-				<input name="city" type="text" class="form-control" placeholder="<?php echo $tours->city; ?>">
+				<input name="city" type="text" class="form-control" value="<?php echo $tours->city; ?>">
 			</div>
 			<div class="form-group">
 				<label>Country</label>
-				<input name="country" type="text" class="form-control" placeholder="<?php echo $tours->country; ?>">
+				<input name="country" type="text" class="form-control" value="<?php echo $tours->country; ?>">
 			</div>
 			<div class="form-group">
 				<label>Amount</label>
-				<input name="amount" type="text" class="form-control" placeholder="<?php echo $tours->amount; ?>">
+				<input name="amount" type="text" class="form-control" value="<?php echo $tours->amount; ?>">
 			</div>
 			<div class="form-group">
 				<label>Description</label>
@@ -86,7 +91,7 @@ $tours=TourPackage::first();
 	</div>
 	<div class="col-md-3"></div>
 </div>
-<script src="https://cloud.tinymce.com/5/tinymce.min.js?apiKey=wey1ni6s7ndtb73g6647wncn0sqa13tu7c2gs0geo6cbwbc9"></script>
+<!-- <script src="https://cloud.tinymce.com/5/tinymce.min.js?apiKey=wey1ni6s7ndtb73g6647wncn0sqa13tu7c2gs0geo6cbwbc9"></script>
 <script type="text/javascript">
 tinymce.init({
 selector: '#myeditablediv',
@@ -98,5 +103,5 @@ plugins: [
 ],
 toolbar: "insertfile undo redo | styleselect | bold italic | alignleft aligncenter alignright alignjustify | bullist numlist outdent indent | link image"
 });
-</script>
+</script> -->
 <?php require 'master/footer.php'; ?>
