@@ -56,7 +56,6 @@
 							<li><a href="login.php">Login</a></li>
 							<li><a href="signup.php">Sign Up</a></li>
 						<?php }
-
 						 ?>
 
 						
@@ -70,19 +69,23 @@
 									</div>
 									<div class="search-menu search-overlay search-hidden">
 										<div class="closeicon"></div>
+
 										<form method="post" class="search-form" action="search_tour.php">
 											<input type="search" class="search-field" placeholder="Search ..." value="" name="s" title="Search for:">
 											<input type="submit" name="search" class="search-submit font-awesome" value="&#xf002;">
+
 										</form>
 										<div class="background-overlay"></div>
 									</div>
 								</li>
 							</ul>
 						</li>
+						<?php print('$output'); ?>
 					</ul>
 				</nav>
 			</div>
 		</div>
 	</header>
+
 
 
