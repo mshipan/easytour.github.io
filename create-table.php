@@ -33,20 +33,20 @@ use Illuminate\Database\Capsule\Manager;
 
 // Table for Tour Package..........
 
-// Manager::schema()->dropIfExists('toursPackage');
-// Manager::schema()->create('toursPackage', function ($table) {
-//     $table->increments('id');
-//     $table->integer('hotelPackage_id')->unsigned();
-//     $table->string('tour_name');
-//     $table->string('city');
-//     $table->string('country');
-//     $table->string('days');
-//     $table->string('night');
-//     $table->string('amount');
-//     $table->string('description');
-//     $table->string('image')->nullable();
-//     $table->timestamps();
-// });
+Manager::schema()->dropIfExists('toursPackage');
+Manager::schema()->create('toursPackage', function ($table) {
+    $table->increments('id');
+    $table->integer('hotelPackage_id')->unsigned();
+    $table->string('tour_name');
+    $table->string('city');
+    $table->string('country');
+    $table->string('days');
+    $table->string('night');
+    $table->string('amount');
+    $table->string('description');
+    $table->string('image')->nullable();
+    $table->timestamps();
+});
 
 
 
@@ -105,17 +105,17 @@ use Illuminate\Database\Capsule\Manager;
 
 
 
-Manager::schema()->dropIfExists('booking');
-Manager::schema()->create('booking', function ($table) {
-    $table->increments('id');
-    $table->string('full_name');
-    $table->string('email');
-    $table->integer('phone');
-    $table->string('package');
-    $table->string('hotel_name');
-    $table->integer('tour_id');
-    $table->string('txnid');
-    $table->timestamps();
-});
+// Manager::schema()->dropIfExists('booking');
+// Manager::schema()->create('booking', function ($table) {
+//     $table->increments('id');
+//     $table->string('full_name');
+//     $table->string('email');
+//     $table->integer('phone');
+//     $table->string('package');
+//     $table->string('hotel_name');
+//     $table->integer('tour_id');
+//     $table->string('txnid');
+//     $table->timestamps();
+// });
 
 

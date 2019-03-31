@@ -5,6 +5,30 @@ if ($_SESSION['user']!=1) {
 }
 require 'master/header.php';
 require'../vendor/autoload.php';
+
+
+$base_dir = __DIR__;
+
+// server protocol
+$protocol = empty($_SERVER['HTTPS']) ? 'http' : 'https';
+
+// domain name
+$domain = $_SERVER['SERVER_NAME'];
+
+// base url
+$base_url = preg_replace("!^${doc_root}!", '', $base_dir);
+
+// server port
+$port = $_SERVER['SERVER_PORT'];
+$disp_port = ($protocol == 'http' && $port == 80 || $protocol == 'https' && $port == 443) ? '' : ":$port";
+
+// put em all together to get the complete base URL
+$url = "${protocol}://${domain}${disp_port}";
+
+echo $url; // = http://example.com/path/directory
+
+
+
 $users=User::all();
 foreach ($users as $key => $user) {
 	
@@ -15,7 +39,7 @@ foreach ($users as $key => $user) {
 			<div class="card-header user-header alt bg-dark">
 				<div class="media">
 					<a href="#">
-						<img class="align-self-center rounded-circle mr-3" style="width:85px; height:85px;" alt="" src="<?php echo 'admin/images/users/'.$user->image; ?>">
+						<img class="align-self-center rounded-circle mr-3" style="width:85px; height:85px;" src="<?php echo $url.'/admin/images/users/'.$user->image; ?>">
 					</a>
 					<div class="media-body">
 						<p class="lead text-success" ><?php echo $user->name; ?></p>

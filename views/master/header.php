@@ -1,3 +1,5 @@
+
+
 <!DOCTYPE html>
 <html lang="en-US">
 
@@ -67,9 +69,11 @@
 									</div>
 									<div class="search-menu search-overlay search-hidden">
 										<div class="closeicon"></div>
-										<form method="post" class="search-form" action="">
-											<input type="search" class="search-field" placeholder="Search ..." value="" name="search" title="Search for:">
-											<input type="submit" class="search-submit font-awesome" value="&#xf002;">
+
+										<form method="post" class="search-form" action="search_tour.php">
+											<input type="search" class="search-field" placeholder="Search ..." value="" name="s" title="Search for:">
+											<input type="submit" name="search" class="search-submit font-awesome" value="&#xf002;">
+
 										</form>
 										<div class="background-overlay"></div>
 									</div>
@@ -83,27 +87,5 @@
 		</div>
 	</header>
 
-<?php 
- 	mysqli_select_db('search_test') or die('could not find in db!!');
- 	$output = '';
- 	if (isset($_POST['search'])) {
- 		$searchq = $_POST['searchq'];
- 		$searchq = preg_replace('#[^0-9a-z]#i', '', $searchq);
 
- 		$query = mysqli_query("SELECT * FROM toursPackage WHERE tour_name like '%$searchq%' OR city like '%$searchq%'") or die('could not search!!');
- 		$count = mysqli_num_rows($query);
-
- 		if ($count==0) {
- 			$output = 'There was no search results.';
- 		}else{
- 			while($row = mysqli_fetch_array($query));
- 			$tour_name = $row['tour_name'];
- 			$city = $row['city'];
- 			$id = $row ['id'];
-
- 			$output .= '<div>'.$tour_name.' '.$city.'</div>';
- 		}
-
- 	}
-?>
 
